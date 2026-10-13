@@ -40,6 +40,13 @@ img{display:block}
   .m-gcC{grid-column:span 5 !important}
   .m-gcD{grid-column:span 12 !important}
 }
+@media (max-width:759px){
+  .m-act1{justify-content:center !important;padding-bottom:0 !important}
+  .m-act1 h1{font-size:clamp(40px,11vw,56px) !important}
+  .m-act3{padding-bottom:clamp(96px,14vh,140px) !important}
+  .m-first{order:-1}
+  [data-nav]{padding:14px 20px !important}
+}
 </style>
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"Restaurant","name":"The Moorings Bar & Restaurant","servesCuisine":"Irish","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"1 Lough Key Wood, Kilfaughna","addressLocality":"Knockvicar","addressRegion":"Co. Roscommon","postalCode":"F52 TX88","addressCountry":"IE"},"telephone":"+353719667622","image":"./assets/exterior.jpg"}
@@ -69,14 +76,14 @@ img{display:block}
   <div data-hero-pin style="position:sticky;top:0;height:100vh;overflow:hidden;background:#0b0e13">
     <canvas data-canvas style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
     <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(11,14,19,.5) 0%,rgba(11,14,19,.12) 30%,rgba(11,14,19,.12) 55%,rgba(11,14,19,.92) 100%)"></div>
-    <div data-dim style="position:absolute;inset:0;pointer-events:none;background:rgba(11,14,19,.5);opacity:0"></div>
+    <div data-dim style="position:absolute;inset:0;pointer-events:none;background:rgba(11,14,19,.5);opacity:0"></div><div data-dim-m style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(11,14,19,.85) 0%,rgba(11,14,19,.55) 45%,rgba(11,14,19,.25) 100%);opacity:0"></div>
     <div style="position:absolute;inset:-10%;pointer-events:none;opacity:.07;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%22.9%22 numOctaves=%222%22/></filter><rect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22/></svg>');animation:grain 1.2s steps(4) infinite"></div>
 
     <!-- act 1 -->
-    <div data-act="1" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(20px,5vw,72px) clamp(48px,8vh,96px);pointer-events:none">
+    <div data-act="1" class="m-act1" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(20px,5vw,72px) clamp(48px,8vh,96px);pointer-events:none">
       <div data-h1 style="display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:22px"><span style="width:40px;height:1px;background:#c9a05c"></span>Bar &amp; Restaurant · Knockvicar, Co. Roscommon</div>
       <h1 style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(44px,9.5vw,160px);line-height:.92;letter-spacing:-.02em;margin:0;max-width:12ch;text-wrap:balance"><span data-h1 style="display:block">Cooked over</span><span data-h1 style="display:block;font-style:italic;color:#c9a05c">fire,</span><span data-h1 style="display:block">served on the water.</span></h1>
-      <div data-h1 style="margin-top:28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;pointer-events:auto">
+      <div data-h1 style="margin-top:28px;display:flex;align-items:center;gap:20px 28px;flex-wrap:wrap;pointer-events:auto">
         <a href="https://www.google.com/maps/dir/?api=1&destination=The+Moorings+Lough+Key+Marina+Knockvicar" target="_blank" style="display:inline-flex;align-items:center;gap:12px;padding:18px 30px;background:#efe6d6;color:#0b0e13;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase">Get directions <span>→</span></a>
         <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a8275;display:flex;align-items:center;gap:10px"><span style="width:8px;height:8px;border-radius:50%;border:1px solid #c9a05c"></span>Scroll to cut in</div>
       </div>
@@ -91,7 +98,7 @@ img{display:block}
     </div>
 
     <!-- act 3 -->
-    <div data-act="3" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;text-align:right;padding:0 clamp(20px,5vw,72px) clamp(48px,8vh,96px);pointer-events:none;opacity:0;text-shadow:0 2px 30px rgba(0,0,0,.6)">
+    <div data-act="3" class="m-act3" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;text-align:right;padding:0 clamp(20px,5vw,72px) clamp(48px,8vh,96px);pointer-events:none;opacity:0;text-shadow:0 2px 30px rgba(0,0,0,.6)">
       <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(36px,6vw,96px);line-height:.98;letter-spacing:-.02em;max-width:14ch;text-wrap:balance">Fifteen minutes from Boyle. Worth every one.</div>
       <div style="margin-top:28px;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:20px 36px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#bfb5a3">
         <div><span style="font-family:'Playfair Display',serif;font-size:34px;color:#efe6d6;letter-spacing:0;text-transform:none;display:block">4.5 ★</span>Google</div>
@@ -215,7 +222,7 @@ img{display:block}
         <div><span style="font-family:'Playfair Display',serif;font-size:30px;color:#efe6d6;letter-spacing:0;text-transform:none;display:block">Garden</span>On the marina</div>
       </div>
     </div>
-    <div data-parallax="60" style="position:relative;aspect-ratio:3/2;overflow:hidden;box-shadow:0 60px 100px -40px rgba(0,0,0,.8)"><img src="./assets/taps.jpg" alt="Beer taps" style="width:100%;height:100%;object-fit:cover"></div>
+    <div data-parallax="60" class="m-first" style="position:relative;aspect-ratio:3/2;overflow:hidden;box-shadow:0 60px 100px -40px rgba(0,0,0,.8)"><img src="./assets/taps.jpg" alt="Beer taps" style="width:100%;height:100%;object-fit:cover"></div>
   </div>
 </section>
 
@@ -306,16 +313,18 @@ img{display:block}
   <div style="font-size:12px;letter-spacing:.04em;text-transform:none;line-height:1.6;color:#6f685d;border-top:1px solid rgba(239,230,214,.06);padding-top:16px;text-wrap:pretty">Design preview only — not the official website of The Moorings. Phone number, prices and opening hours are placeholders and may not be accurate. Please check Google Maps for current details.</div>
 </footer>
 
-<a href="tel:+353719667622" class="m-sticky" style="position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:none;justify-content:center;padding:16px;background:#c9a05c;color:#0b0e13;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 20px 40px -10px rgba(0,0,0,.7)">Call +353 71 966 7622</a>
+<a href="tel:+353719667622" class="m-sticky" data-sticky style="position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:none;opacity:0;transform:translateY(20px);transition:opacity .4s,transform .4s;pointer-events:none;justify-content:center;padding:16px;background:#c9a05c;color:#0b0e13;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 20px 40px -10px rgba(0,0,0,.7)">Call +353 71 966 7622</a>
 </div>
 <script>
 (function(){
-  const S = { N: 72, frames: [], cur: -1, lastIdx: 0, props: { motion: 'full' } };
+  const S = { N: 144, frames: [], cur: -1, lastIdx: 0, props: { motion: 'full' } };
   const bar = document.querySelector('[data-loader] div div');
   S.setState = o => { if (o.loaded != null && bar) bar.style.width = Math.round(o.loaded / S.N * 100) + '%'; };
   S.loadFrames = function(){
     let done = 0; const N = this.N;
-    const first = new Promise(res => { for (let i = 0; i < N; i++) { const im = new Image(); im.src = `./assets/seq/f${String(i).padStart(3, '0')}.jpg`; im.onload = im.onerror = () => { done++; this.setState({ loaded: done }); if (done === 12) res(); if (done === N) this.ready = true; }; this.frames.push(im); } });
+    const order = []; for (const step of [8, 4, 2, 1]) for (let i = 0; i < N; i += step) if (!order.includes(i)) order.push(i);
+    this.frames = new Array(N);
+    const first = new Promise(res => { let idx = 0; const next = () => { if (idx >= order.length) return; const i = order[idx++]; const im = new Image(); im.decoding = 'async'; im.src = `./assets/seq2/f${String(i).padStart(3, '0')}.webp`; im.onload = im.onerror = () => { done++; this.setState({ loaded: done }); if (done === 18) res(); if (done === N) this.ready = true; if (this.cur >= 0 && Math.abs(i - this.lastIdx) < 2) { this.cur = -1; this.draw(this.lastIdx); } next(); }; this.frames[i] = im; }; for (let k = 0; k < 6; k++) next(); });
     first.then(() => { this.initCanvas(); this.initScroll(); this.hideLoader(); });};
   S.hideLoader = function(){
     const el = document.querySelector('[data-loader]'); if (!el) return;
@@ -328,7 +337,7 @@ img{display:block}
     size(); this.onCanvasRs = size; window.addEventListener('resize', size);};
   S.draw = function(i){
     const ok = k => this.frames[k] && this.frames[k].complete && this.frames[k].naturalWidth;
-    let k = i; while (k >= 0 && !ok(k)) k--; if (k < 0) return;
+    let k = i, j = i; while (k >= 0 && !ok(k)) k--; while (j < this.N && !ok(j)) j++; if (k < 0 && j >= this.N) return; if (k < 0 || (j < this.N && j - i < i - k)) k = j;
     if (k === this.cur) return; this.cur = k; this.lastIdx = i;
     const img = this.frames[k];
     const c = this.canvas, ctx = this.ctx, W = c.width, H = c.height;
@@ -338,10 +347,11 @@ img{display:block}
   S.initScroll = function(){
     const gsap = window.gsap, ST = window.ScrollTrigger, motion = (this.props.motion ?? 'full') !== 'off';
     const N = this.N, prox = { f: 0 };
-    gsap.to(prox, { f: N - 1, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom bottom', scrub: 0.4 }, onUpdate: () => this.draw(Math.round(prox.f)) });
+    gsap.to(prox, { f: N - 1, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom bottom', scrub: 0.15 }, onUpdate: () => this.draw(Math.round(prox.f)) });
+    if (window.innerWidth < 760) gsap.set('[data-dim-m]', { opacity: 1 });
     const tl = gsap.timeline({ scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom bottom', scrub: 0.3 } });
     tl.to('[data-act="1"]', { opacity: 0, y: -60, duration: .18, ease: 'power1.in' }, .05)
-      .fromTo('[data-dim]', { opacity: 0 }, { opacity: 1, duration: .12, ease: 'none' }, .28)
+      .fromTo('[data-dim]', { opacity: 0 }, { opacity: window.innerWidth < 760 ? 1.0 : 1, duration: .12, ease: 'none' }, .28)
       .fromTo('[data-act="2"]', { opacity: 0, scale: .96 }, { opacity: 1, scale: 1, duration: .15, ease: 'power2.out' }, .32)
       .to('[data-act="2"]', { opacity: 0, y: -40, duration: .14, ease: 'power1.in' }, .58)
       .to('[data-dim]', { opacity: .35, duration: .12, ease: 'none' }, .6)
@@ -349,7 +359,8 @@ img{display:block}
     const nav = document.querySelector('[data-nav]');
     const heroEl = document.querySelector('[data-hero]');
     const navUpd = () => { const on = heroEl.getBoundingClientRect().bottom <= window.innerHeight + 2; nav.style.background = on ? 'rgba(11,14,19,.72)' : 'transparent'; nav.style.backdropFilter = on ? 'blur(14px)' : 'none'; nav.style.padding = on ? '14px clamp(20px,5vw,72px)' : '20px clamp(20px,5vw,72px)'; };
-    ST.create({ start: 0, end: 'max', onUpdate: navUpd }); navUpd();
+    const stk = document.querySelector('[data-sticky]'); const stkUpd = () => { if (!stk) return; const on = heroEl.getBoundingClientRect().bottom <= window.innerHeight + 2; stk.style.opacity = on ? 1 : 0; stk.style.transform = on ? 'none' : 'translateY(20px)'; stk.style.pointerEvents = on ? 'auto' : 'none'; };
+    ST.create({ start: 0, end: 'max', onUpdate: () => { navUpd(); stkUpd(); } }); navUpd(); stkUpd();
     document.querySelectorAll('[data-reveal]').forEach(el => gsap.from(el, { y: 36, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } }));
     document.querySelectorAll('[data-mask]').forEach(el => { gsap.fromTo(el, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 1.4, ease: 'power4.out', scrollTrigger: { trigger: el, start: 'top 85%' } }); const im = el.querySelector('img'); if (im && motion) gsap.fromTo(im, { scale: 1.2 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } }); });
     const split = document.querySelector('[data-split]');
@@ -363,7 +374,7 @@ img{display:block}
     const dist = () => Math.max(0, track.scrollWidth - window.innerWidth);
     gsap.to(track, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: '[data-menu]', start: 'top top', end: () => '+=' + dist(), pin: '[data-menu-pin]', scrub: 1, invalidateOnRefresh: true, anticipatePin: 1 } });
     const mq = document.querySelector('[data-marquee]');
-    gsap.fromTo(mq, { x: 0 }, { x: () => -(mq.scrollWidth - window.innerWidth), ease: 'none', scrollTrigger: { trigger: mq, start: 'top bottom', end: 'bottom top', scrub: 1, invalidateOnRefresh: true } });
+    if (window.innerWidth < 760) { mq.style.width = '100%'; mq.style.overflowX = 'auto'; mq.style.scrollSnapType = 'x mandatory'; mq.style.padding = '0 20px 12px'; mq.style.scrollPaddingLeft = '20px'; mq.querySelectorAll(':scope > div').forEach(c => { c.style.scrollSnapAlign = 'start'; }); } else gsap.fromTo(mq, { x: 0 }, { x: () => -(mq.scrollWidth - window.innerWidth), ease: 'none', scrollTrigger: { trigger: mq, start: 'top bottom', end: 'bottom top', scrub: 1, invalidateOnRefresh: true } });
     setTimeout(() => ST.refresh(), 600);};
   function boot(){ if (!(window.gsap && window.ScrollTrigger)) return setTimeout(boot, 50); gsap.registerPlugin(ScrollTrigger); S.loadFrames(); }
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
