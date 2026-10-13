@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Moorings — Bar &amp; Restaurant, Lough Key Marina, Knockvicar</title>
+<meta name="description" content="Country bar & restaurant on Lough Key Marina, Knockvicar, Co. Roscommon. Flame-grilled skewers, slow ribs, open fire, live music on Fridays. 15 minutes from Boyle.">
+<meta property="og:title" content="The Moorings — Bar &amp; Restaurant, Lough Key Marina">
+<meta property="og:description" content="Cooked over fire, served on the water. Knockvicar, Co. Roscommon.">
+<meta property="og:image" content="./assets/exterior.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230b0e13'/><text x='32' y='44' font-family='Georgia,serif' font-size='40' fill='%23c9a05c' text-anchor='middle'>M</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<style>
+html,body{margin:0;padding:0;background:#0b0e13;color:#efe6d6;font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased}
+a{color:#c9a05c;text-decoration:none}a:hover{color:#efe6d6}
+*{box-sizing:border-box}
+::selection{background:#a8432f;color:#fff}
+img{display:block}
+@keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-2%,1%)}40%{transform:translate(1%,-2%)}60%{transform:translate(-1%,2%)}80%{transform:translate(2%,-1%)}}
+.h1:hover{background:#c9a05c !important;color:#0b0e13 !important}
+.h2:hover{transform:scale(1.04) !important}
+.h3:hover{transform:scale(1.04) !important}
+.h4:hover{transform:scale(1.04) !important}
+.h5:hover{transform:scale(1.04) !important}
+.h6:hover{transform:scale(1.04) !important}
+.h7:hover{transform:scale(1.04) !important}
+.h8:hover{background:#c9a05c !important;color:#0b0e13 !important}
+
+@media (max-width:759px){
+  .m-sticky{display:flex !important}
+  .m-navlinks{display:none !important}
+  .m-footer{padding-bottom:96px !important}
+  .m-gcA{grid-column:span 12 !important}
+  .m-gcB{grid-column:span 7 !important;margin-top:0 !important}
+  .m-gcC{grid-column:span 5 !important}
+  .m-gcD{grid-column:span 12 !important}
+}
+</style>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Restaurant","name":"The Moorings Bar & Restaurant","servesCuisine":"Irish","priceRange":"€€","address":{"@type":"PostalAddress","streetAddress":"1 Lough Key Wood, Kilfaughna","addressLocality":"Knockvicar","addressRegion":"Co. Roscommon","postalCode":"F52 TX88","addressCountry":"IE"},"telephone":"+353719667622","image":"./assets/exterior.jpg"}
+</script>
+</head>
+<body>
+<div data-screen-label="Landing v3" style="background:#0b0e13;overflow-x:clip;position:relative">
+
+<!-- loader -->
+<div data-loader style="position:fixed;inset:0;z-index:100;background:#0b0e13;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px">
+  <div style="font-family:'Playfair Display',serif;font-size:clamp(28px,4vw,44px);letter-spacing:.02em">The Moorings</div>
+  <div style="width:160px;height:1px;background:rgba(239,230,214,.15);position:relative"><div style="position:absolute;left:0;top:0;bottom:0;background:#c9a05c;width:0%"></div></div>
+  <div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#8a8275">Lough Key Marina</div>
+</div>
+
+<!-- nav -->
+<nav data-nav style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px clamp(20px,5vw,72px);transition:background .5s,backdrop-filter .5s,padding .5s">
+  <a href="#top" style="font-family:'Playfair Display',serif;font-size:22px;letter-spacing:.03em;color:#efe6d6">The Moorings</a>
+  <div class="m-navlinks" style="display:flex;gap:32px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#bfb5a3">
+    <a href="#rooms" style="color:#bfb5a3">Rooms</a><a href="#menu" style="color:#bfb5a3">Menu</a><a href="#bar" style="color:#bfb5a3">Bar</a><a href="#visit" style="color:#bfb5a3">Visit</a>
+  </div>
+  <a href="tel:+353719667622" style="display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid rgba(201,160,92,.6);color:#efe6d6;font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;transition:background .3s,color .3s"  class="h1">Book by phone</a>
+</nav>
+
+<!-- HERO: scroll-scrub frame sequence -->
+<section id="top" data-hero style="position:relative;height:380vh">
+  <div data-hero-pin style="position:sticky;top:0;height:100vh;overflow:hidden;background:#0b0e13">
+    <canvas data-canvas style="position:absolute;inset:0;width:100%;height:100%;display:block"></canvas>
+    <div style="position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,rgba(11,14,19,.5) 0%,rgba(11,14,19,.12) 30%,rgba(11,14,19,.12) 55%,rgba(11,14,19,.92) 100%)"></div>
+    <div data-dim style="position:absolute;inset:0;pointer-events:none;background:rgba(11,14,19,.5);opacity:0"></div>
+    <div style="position:absolute;inset:-10%;pointer-events:none;opacity:.07;background-image:url('data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 width=%22200%22 height=%22200%22><filter id=%22n%22><feTurbulence type=%22fractalNoise%22 baseFrequency=%22.9%22 numOctaves=%222%22/></filter><rect width=%22200%22 height=%22200%22 filter=%22url(%23n)%22/></svg>');animation:grain 1.2s steps(4) infinite"></div>
+
+    <!-- act 1 -->
+    <div data-act="1" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;padding:0 clamp(20px,5vw,72px) clamp(48px,8vh,96px);pointer-events:none">
+      <div data-h1 style="display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:22px"><span style="width:40px;height:1px;background:#c9a05c"></span>Bar &amp; Restaurant · Knockvicar, Co. Roscommon</div>
+      <h1 style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(44px,9.5vw,160px);line-height:.92;letter-spacing:-.02em;margin:0;max-width:12ch;text-wrap:balance"><span data-h1 style="display:block">Cooked over</span><span data-h1 style="display:block;font-style:italic;color:#c9a05c">fire,</span><span data-h1 style="display:block">served on the water.</span></h1>
+      <div data-h1 style="margin-top:28px;display:flex;align-items:center;gap:28px;flex-wrap:wrap;pointer-events:auto">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=The+Moorings+Lough+Key+Marina+Knockvicar" target="_blank" style="display:inline-flex;align-items:center;gap:12px;padding:18px 30px;background:#efe6d6;color:#0b0e13;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase">Get directions <span>→</span></a>
+        <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a8275;display:flex;align-items:center;gap:10px"><span style="width:8px;height:8px;border-radius:50%;border:1px solid #c9a05c"></span>Scroll to cut in</div>
+      </div>
+    </div>
+
+    <!-- act 2 -->
+    <div data-act="2" style="position:absolute;inset:0;display:grid;place-items:center;padding:0 clamp(20px,5vw,72px);pointer-events:none;opacity:0">
+      <div style="text-align:center;max-width:900px;text-shadow:0 2px 30px rgba(0,0,0,.6)">
+        <div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:22px">The Moorings Burger · €16</div>
+        <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,6.5vw,104px);line-height:1;letter-spacing:-.02em;text-wrap:balance">Two Irish beef patties. Smoked cheddar. <em style="color:#c9a05c">No shortcuts.</em></div>
+      </div>
+    </div>
+
+    <!-- act 3 -->
+    <div data-act="3" style="position:absolute;inset:0;display:flex;flex-direction:column;justify-content:flex-end;align-items:flex-end;text-align:right;padding:0 clamp(20px,5vw,72px) clamp(48px,8vh,96px);pointer-events:none;opacity:0;text-shadow:0 2px 30px rgba(0,0,0,.6)">
+      <div style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(36px,6vw,96px);line-height:.98;letter-spacing:-.02em;max-width:14ch;text-wrap:balance">Fifteen minutes from Boyle. Worth every one.</div>
+      <div style="margin-top:28px;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:20px 36px;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#bfb5a3">
+        <div><span style="font-family:'Playfair Display',serif;font-size:34px;color:#efe6d6;letter-spacing:0;text-transform:none;display:block">4.5 ★</span>Google</div>
+        <div><span style="font-family:'Playfair Display',serif;font-size:34px;color:#efe6d6;letter-spacing:0;text-transform:none;display:block">Fri</span>Live music</div>
+        <div><span style="font-family:'Playfair Display',serif;font-size:34px;color:#efe6d6;letter-spacing:0;text-transform:none;display:block">Marina</span>Boats tie up at the door</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATEMENT -->
+<section style="padding:clamp(100px,14vw,200px) clamp(20px,5vw,72px);max-width:1400px;margin:0 auto">
+  <div data-split style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(30px,4.2vw,66px);line-height:1.15;letter-spacing:-.01em;text-wrap:balance;color:#efe6d6">
+    A stone pub at the gates of Lough Key Marina. <span style="color:#8a8275">Navy walls, a brick hearth, a conservatory full of evening light</span> — and a kitchen that cooks like it has something to prove.
+  </div>
+</section>
+
+<!-- ROOMS: three sticky panels -->
+<section id="rooms">
+  <div data-room style="position:relative;height:100vh;overflow:hidden">
+    <img data-room-img src="./assets/bar.jpg" alt="The bar" style="position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,14,19,.9),rgba(11,14,19,.1) 55%)"></div>
+    <div style="position:absolute;left:clamp(20px,5vw,72px);right:clamp(20px,5vw,72px);bottom:clamp(40px,7vh,80px);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
+      <div><div data-reveal style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:16px">01 — The bar</div><h2 data-reveal style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,6vw,96px);line-height:.95;margin:0;letter-spacing:-.02em">Pints under Tiffany glass</h2></div>
+      <p data-reveal style="margin:0;max-width:380px;font-size:16px;line-height:1.6;color:#d8cfbe">Guinness, Smithwick's and seven taps on an oak counter. Pool and darts through the back. Live music every Friday night.</p>
+    </div>
+  </div>
+  <div data-room style="position:relative;height:100vh;overflow:hidden">
+    <img data-room-img src="./assets/fireplace.jpg" alt="Dining room with fireplace" style="position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,14,19,.9),rgba(11,14,19,.1) 55%)"></div>
+    <div style="position:absolute;left:clamp(20px,5vw,72px);right:clamp(20px,5vw,72px);bottom:clamp(40px,7vh,80px);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
+      <div><div data-reveal style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:16px">02 — The hearth</div><h2 data-reveal style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,6vw,96px);line-height:.95;margin:0;letter-spacing:-.02em">Dinner by the stove</h2></div>
+      <p data-reveal style="margin:0;max-width:380px;font-size:16px;line-height:1.6;color:#d8cfbe">Brick chimney, logs stacked and lit from October. The room families book for Sunday lunch and keep for the evening.</p>
+    </div>
+  </div>
+  <div data-room style="position:relative;height:100vh;overflow:hidden">
+    <img data-room-img src="./assets/conservatory.jpg" alt="Conservatory" style="position:absolute;inset:-12% 0;width:100%;height:124%;object-fit:cover">
+    <div style="position:absolute;inset:0;background:linear-gradient(to top,rgba(11,14,19,.9),rgba(11,14,19,.1) 55%)"></div>
+    <div style="position:absolute;left:clamp(20px,5vw,72px);right:clamp(20px,5vw,72px);bottom:clamp(40px,7vh,80px);display:flex;justify-content:space-between;align-items:flex-end;gap:32px;flex-wrap:wrap">
+      <div><div data-reveal style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:16px">03 — The conservatory</div><h2 data-reveal style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,6vw,96px);line-height:.95;margin:0;letter-spacing:-.02em">Long table, low sun</h2></div>
+      <p data-reveal style="margin:0;max-width:380px;font-size:16px;line-height:1.6;color:#d8cfbe">Seats sixteen along the stone wall. Birthdays, christenings, the 27-strong Easter crowd — ring Roger and it's yours.</p>
+    </div>
+  </div>
+</section>
+
+<!-- MENU: horizontal -->
+<section id="menu" data-menu style="background:#0b0e13;overflow:hidden">
+  <div data-menu-pin style="height:100vh;display:flex;flex-direction:column;justify-content:center;gap:clamp(20px,4vh,40px)">
+    <div style="padding:0 clamp(20px,5vw,72px);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
+      <div><div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:14px">From the kitchen</div><h2 style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,5.5vw,88px);line-height:.95;margin:0;letter-spacing:-.02em">What to order</h2></div>
+      <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a8275">Scroll →</div>
+    </div>
+    <div data-menu-track style="display:flex;gap:clamp(16px,2vw,32px);width:max-content;padding-left:clamp(20px,5vw,72px);will-change:transform">
+      
+        <div style="width:min(78vw,620px);flex:none">
+          <div style="position:relative;aspect-ratio:3/2;overflow:hidden;background:#141922"><img src="./assets/skewers.jpg" alt="Flame-grilled beef skewers" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)"  class="h2"><div style="position:absolute;left:16px;top:16px;font-family:'Playfair Display',serif;font-size:14px;letter-spacing:.1em;color:#efe6d6;background:rgba(11,14,19,.7);padding:6px 10px">No. 01</div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;border-top:1px solid rgba(239,230,214,.15);padding-top:16px">
+            <div><div style="font-family:'Playfair Display',serif;font-size:clamp(22px,2.2vw,32px);line-height:1.1">Flame-grilled beef skewers</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#bfb5a3;max-width:420px;text-wrap:pretty">Irish beef and red onion straight off the grill, chunky chips, peppercorn sauce, dressed leaves.</p></div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:#c9a05c;white-space:nowrap">€24</div>
+          </div>
+        </div>
+      
+        <div style="width:min(78vw,620px);flex:none">
+          <div style="position:relative;aspect-ratio:3/2;overflow:hidden;background:#141922"><img src="./assets/ribs.jpg" alt="Slow pork ribs" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)"  class="h3"><div style="position:absolute;left:16px;top:16px;font-family:'Playfair Display',serif;font-size:14px;letter-spacing:.1em;color:#efe6d6;background:rgba(11,14,19,.7);padding:6px 10px">No. 02</div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;border-top:1px solid rgba(239,230,214,.15);padding-top:16px">
+            <div><div style="font-family:'Playfair Display',serif;font-size:clamp(22px,2.2vw,32px);line-height:1.1">Slow pork ribs</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#bfb5a3;max-width:420px;text-wrap:pretty">A full rack, sticky house glaze, chives, slaw and chips. The one guests write home about.</p></div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:#c9a05c;white-space:nowrap">€22</div>
+          </div>
+        </div>
+      
+        <div style="width:min(78vw,620px);flex:none">
+          <div style="position:relative;aspect-ratio:3/2;overflow:hidden;background:#141922"><img src="./assets/lamb.jpg" alt="Lamb shanks" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)"  class="h4"><div style="position:absolute;left:16px;top:16px;font-family:'Playfair Display',serif;font-size:14px;letter-spacing:.1em;color:#efe6d6;background:rgba(11,14,19,.7);padding:6px 10px">No. 03</div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;border-top:1px solid rgba(239,230,214,.15);padding-top:16px">
+            <div><div style="font-family:'Playfair Display',serif;font-size:clamp(22px,2.2vw,32px);line-height:1.1">Lamb shanks</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#bfb5a3;max-width:420px;text-wrap:pretty">Braised till it slides off the bone, roasted garlic, red-wine jus. Order a glass of Rioja with it.</p></div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:#c9a05c;white-space:nowrap">€26</div>
+          </div>
+        </div>
+      
+        <div style="width:min(78vw,620px);flex:none">
+          <div style="position:relative;aspect-ratio:3/2;overflow:hidden;background:#141922"><img src="./assets/wings.jpg" alt="Char-grilled wings" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)"  class="h5"><div style="position:absolute;left:16px;top:16px;font-family:'Playfair Display',serif;font-size:14px;letter-spacing:.1em;color:#efe6d6;background:rgba(11,14,19,.7);padding:6px 10px">No. 04</div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;border-top:1px solid rgba(239,230,214,.15);padding-top:16px">
+            <div><div style="font-family:'Playfair Display',serif;font-size:clamp(22px,2.2vw,32px);line-height:1.1">Char-grilled wings</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#bfb5a3;max-width:420px;text-wrap:pretty">Cajun-rubbed, blistered on the grill, with a house dip. Made for the bar, better with a pint.</p></div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:#c9a05c;white-space:nowrap">€14</div>
+          </div>
+        </div>
+      
+        <div style="width:min(78vw,620px);flex:none">
+          <div style="position:relative;aspect-ratio:3/2;overflow:hidden;background:#141922"><img src="./assets/stew.jpg" alt="Beef &amp; Guinness stew" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)"  class="h6"><div style="position:absolute;left:16px;top:16px;font-family:'Playfair Display',serif;font-size:14px;letter-spacing:.1em;color:#efe6d6;background:rgba(11,14,19,.7);padding:6px 10px">No. 05</div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;border-top:1px solid rgba(239,230,214,.15);padding-top:16px">
+            <div><div style="font-family:'Playfair Display',serif;font-size:clamp(22px,2.2vw,32px);line-height:1.1">Beef &amp; Guinness stew</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#bfb5a3;max-width:420px;text-wrap:pretty">Slow-cooked shin, smoked bacon, mushrooms, champ and carrot mash. Winter in a bowl.</p></div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:#c9a05c;white-space:nowrap">€19</div>
+          </div>
+        </div>
+      
+        <div style="width:min(78vw,620px);flex:none">
+          <div style="position:relative;aspect-ratio:3/2;overflow:hidden;background:#141922"><img src="./assets/dessert.jpg" alt="Chocolate biscuit cake" style="width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)"  class="h7"><div style="position:absolute;left:16px;top:16px;font-family:'Playfair Display',serif;font-size:14px;letter-spacing:.1em;color:#efe6d6;background:rgba(11,14,19,.7);padding:6px 10px">No. 06</div></div>
+          <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;margin-top:18px;border-top:1px solid rgba(239,230,214,.15);padding-top:16px">
+            <div><div style="font-family:'Playfair Display',serif;font-size:clamp(22px,2.2vw,32px);line-height:1.1">Chocolate biscuit cake</div><p style="margin:8px 0 0;font-size:14px;line-height:1.55;color:#bfb5a3;max-width:420px;text-wrap:pretty">Dense, cold, the way it should be — vanilla ice cream and whipped cream. Share it or don’t.</p></div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;color:#c9a05c;white-space:nowrap">€8</div>
+          </div>
+        </div>
+      
+      <div style="width:min(78vw,620px);flex:none;display:flex;flex-direction:column;justify-content:center;gap:20px;padding:0 clamp(20px,5vw,72px) 0 20px">
+        <div style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);line-height:1.1;text-wrap:balance">Full Irish from 10am at weekends. Specials on the board. Kids' menu, always.</div>
+        <a href="tel:+353719667622" style="display:inline-flex;align-items:center;gap:12px;align-self:flex-start;padding:16px 26px;border:1px solid rgba(201,160,92,.6);color:#efe6d6;font-size:12px;letter-spacing:.14em;text-transform:uppercase"  class="h8">Call +353 71 966 7622 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BAR strip -->
+<section id="bar" style="position:relative;padding:clamp(100px,14vw,200px) clamp(20px,5vw,72px);background:#16233a;overflow:hidden">
+  <div style="max-width:1400px;margin:0 auto;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:clamp(40px,6vw,96px);align-items:center">
+    <div>
+      <div data-reveal style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:18px">A proper country bar</div>
+      <h2 data-reveal style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,5.5vw,88px);line-height:.95;margin:0 0 28px;letter-spacing:-.02em">Seven taps.<br><em style="color:#c9a05c">One good reason to stay.</em></h2>
+      <p data-reveal style="margin:0 0 36px;font-size:17px;line-height:1.7;color:#d8cfbe;max-width:460px;text-wrap:pretty">Guinness poured the slow way, Smithwick's, Heineken, Coors, Carlsberg, San Miguel. A short, honest wine list and the piña colada Tripadvisor keeps mentioning.</p>
+      <div data-reveal style="display:flex;gap:40px;flex-wrap:wrap;font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#bfb5a3">
+        <div><span style="font-family:'Playfair Display',serif;font-size:30px;color:#efe6d6;letter-spacing:0;text-transform:none;display:block">Fri</span>Live music</div>
+        <div><span style="font-family:'Playfair Display',serif;font-size:30px;color:#efe6d6;letter-spacing:0;text-transform:none;display:block">Pool</span>&amp; darts</div>
+        <div><span style="font-family:'Playfair Display',serif;font-size:30px;color:#efe6d6;letter-spacing:0;text-transform:none;display:block">Garden</span>On the marina</div>
+      </div>
+    </div>
+    <div data-parallax="60" style="position:relative;aspect-ratio:3/2;overflow:hidden;box-shadow:0 60px 100px -40px rgba(0,0,0,.8)"><img src="./assets/taps.jpg" alt="Beer taps" style="width:100%;height:100%;object-fit:cover"></div>
+  </div>
+</section>
+
+<!-- GALLERY grid -->
+<section style="padding:clamp(100px,14vw,200px) clamp(20px,5vw,72px);max-width:1400px;margin:0 auto">
+  <div style="display:grid;grid-template-columns:repeat(12,1fr);gap:clamp(12px,1.5vw,24px);align-items:start">
+    <div data-mask class="m-gcA" style="grid-column:span 7;aspect-ratio:3/2;overflow:hidden;background:#141922"><img src="./assets/table.jpg" alt="Table of food" style="width:100%;height:100%;object-fit:cover"></div>
+    <div data-mask class="m-gcB" style="grid-column:span 5;aspect-ratio:4/5;overflow:hidden;background:#141922;margin-top:clamp(40px,8vw,120px)"><img src="./assets/lounge-tall.jpg" alt="Lounge" style="width:100%;height:100%;object-fit:cover"></div>
+    <div data-mask class="m-gcC" style="grid-column:span 4;aspect-ratio:4/5;overflow:hidden;background:#141922"><img src="./assets/skewers-tall.jpg" alt="Skewers" style="width:100%;height:100%;object-fit:cover"></div>
+    <div class="m-gcD" style="grid-column:span 4;padding:clamp(16px,2vw,32px) 0;display:flex;flex-direction:column;justify-content:center;gap:16px;align-self:center">
+      <div data-reveal style="font-family:'Playfair Display',serif;font-size:clamp(26px,2.6vw,40px);line-height:1.1;text-wrap:balance">Since Roger took the helm, the place has gone from strength to strength.</div>
+      <div data-reveal style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a8275">Tripadvisor · 2025</div>
+    </div>
+    <div data-mask class="m-gcC" style="grid-column:span 4;aspect-ratio:4/5;overflow:hidden;background:#141922"><img src="./assets/exterior-tall.jpg" alt="Exterior" style="width:100%;height:100%;object-fit:cover"></div>
+  </div>
+</section>
+
+<!-- REVIEWS marquee -->
+<section style="padding:0 0 clamp(100px,14vw,200px);overflow:hidden">
+  <div style="padding:0 clamp(20px,5vw,72px);display:flex;align-items:baseline;gap:24px;margin-bottom:40px">
+    <div style="font-family:'Playfair Display',serif;font-size:clamp(80px,12vw,180px);line-height:.85;letter-spacing:-.03em">4.5</div>
+    <div><div style="color:#c9a05c;font-size:22px;letter-spacing:4px">★★★★★</div><div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a8275;margin-top:6px">Google &amp; Tripadvisor</div></div>
+  </div>
+  <div data-marquee style="display:flex;gap:20px;width:max-content;will-change:transform">
+    
+      <div style="width:min(80vw,440px);flex:none;padding:28px;border:1px solid rgba(239,230,214,.12);display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:220px">
+        <p style="margin:0;font-family:'Playfair Display',serif;font-size:20px;line-height:1.4;font-style:italic;text-wrap:pretty">“What a beautiful restaurant and bar on the Knockvicar Marina. The perfect spot to sit outside and soak up a warm Irish summer day.”</p>
+        <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8275"><span style="color:#bfb5a3">Couples visit</span><span>Tripadvisor</span></div>
+      </div>
+    
+      <div style="width:min(80vw,440px);flex:none;padding:28px;border:1px solid rgba(239,230,214,.12);display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:220px">
+        <p style="margin:0;font-family:'Playfair Display',serif;font-size:20px;line-height:1.4;font-style:italic;text-wrap:pretty">“Every dish is crafted with care. Service attentive without ever feeling rushed.”</p>
+        <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8275"><span style="color:#bfb5a3">Dinner guest</span><span>Google</span></div>
+      </div>
+    
+      <div style="width:min(80vw,440px);flex:none;padding:28px;border:1px solid rgba(239,230,214,.12);display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:220px">
+        <p style="margin:0;font-family:'Playfair Display',serif;font-size:20px;line-height:1.4;font-style:italic;text-wrap:pretty">“27 of us descended on The Moorings for Easter Sunday dinner. Roger and the team looked after us very well.”</p>
+        <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8275"><span style="color:#bfb5a3">Group booking</span><span>Google</span></div>
+      </div>
+    
+      <div style="width:min(80vw,440px);flex:none;padding:28px;border:1px solid rgba(239,230,214,.12);display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:220px">
+        <p style="margin:0;font-family:'Playfair Display',serif;font-size:20px;line-height:1.4;font-style:italic;text-wrap:pretty">“The most delicious ribs in my life. Generous portions, very friendly staff, lovely atmosphere.”</p>
+        <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8275"><span style="color:#bfb5a3">Family lunch</span><span>Google</span></div>
+      </div>
+    
+      <div style="width:min(80vw,440px);flex:none;padding:28px;border:1px solid rgba(239,230,214,.12);display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:220px">
+        <p style="margin:0;font-family:'Playfair Display',serif;font-size:20px;line-height:1.4;font-style:italic;text-wrap:pretty">“Best Piña Colada around. Great music on a Friday night.”</p>
+        <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8275"><span style="color:#bfb5a3">Local</span><span>Google</span></div>
+      </div>
+    
+      <div style="width:min(80vw,440px);flex:none;padding:28px;border:1px solid rgba(239,230,214,.12);display:flex;flex-direction:column;justify-content:space-between;gap:24px;min-height:220px">
+        <p style="margin:0;font-family:'Playfair Display',serif;font-size:20px;line-height:1.4;font-style:italic;text-wrap:pretty">“Food was excellent, atmosphere relaxing. We tied up the boat and stayed for the evening.”</p>
+        <div style="display:flex;justify-content:space-between;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8a8275"><span style="color:#bfb5a3">Boaters</span><span>Tripadvisor</span></div>
+      </div>
+    
+  </div>
+</section>
+
+<!-- VISIT -->
+<section id="visit" style="position:relative;min-height:100vh;display:grid;align-items:end;overflow:hidden">
+  <img data-visit-img src="./assets/exterior.jpg" alt="The Moorings exterior" style="position:absolute;inset:-10% 0;width:100%;height:120%;object-fit:cover">
+  <div style="position:absolute;inset:0;background:linear-gradient(to top,#0b0e13 0%,rgba(11,14,19,.85) 40%,rgba(11,14,19,.2) 100%)"></div>
+  <div style="position:relative;padding:clamp(120px,20vh,240px) clamp(20px,5vw,72px) clamp(60px,8vh,96px);max-width:1400px;margin:0 auto;width:100%;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,300px),1fr));gap:clamp(32px,5vw,80px);align-items:end">
+    <div>
+      <div data-reveal style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:18px">Find us</div>
+      <h2 data-reveal style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(44px,6vw,96px);line-height:.95;margin:0 0 28px;letter-spacing:-.02em">Lough Key Marina,<br>Knockvicar</h2>
+      <p data-reveal style="margin:0 0 36px;font-size:16px;line-height:1.7;color:#d8cfbe">1 Lough Key Wood, Kilfaughna, Co. Roscommon, F52 TX88<br>Free parking · Boat moorings · Wheelchair access · Kids welcome</p>
+      <div data-reveal style="display:flex;flex-wrap:wrap;gap:12px">
+        <a href="https://www.google.com/maps/dir/?api=1&destination=The+Moorings+Lough+Key+Marina+Knockvicar" target="_blank" style="display:inline-flex;align-items:center;gap:12px;padding:18px 30px;background:#efe6d6;color:#0b0e13;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase">Open in Maps →</a>
+        <a href="tel:+353719667622" style="display:inline-flex;align-items:center;padding:18px 30px;border:1px solid rgba(239,230,214,.35);color:#efe6d6;font-size:13px;letter-spacing:.12em;text-transform:uppercase">+353 71 966 7622</a>
+      </div>
+    </div>
+    <div data-reveal style="display:grid;grid-template-columns:auto 1fr;gap:12px 32px;align-items:baseline;font-size:15px;max-width:420px;justify-self:end;width:100%">
+      <span style="color:#8a8275;letter-spacing:.1em;text-transform:uppercase;font-size:11px">Thu</span><span style="font-family:'Playfair Display',serif;font-size:22px;line-height:1">17:00 – 23:30</span>
+      <span style="color:#8a8275;letter-spacing:.1em;text-transform:uppercase;font-size:11px">Fri – Sat</span><span style="font-family:'Playfair Display',serif;font-size:22px;line-height:1">14:00 – 23:30</span>
+      <span style="color:#8a8275;letter-spacing:.1em;text-transform:uppercase;font-size:11px">Sun</span><span style="font-family:'Playfair Display',serif;font-size:22px;line-height:1">12:45 – 23:30</span>
+      <span style="color:#8a8275;letter-spacing:.1em;text-transform:uppercase;font-size:11px">Mon – Wed</span><span style="font-family:'Playfair Display',serif;font-size:22px;line-height:1;color:#8a8275">Closed off-season</span>
+      <span style="grid-column:span 2;font-size:12px;color:#8a8275;border-top:1px solid rgba(239,230,214,.12);padding-top:12px">Longer hours in summer. Groups of 8+ — call ahead.</span>
+    </div>
+  </div>
+</section>
+
+<footer class="m-footer" style="padding:32px clamp(20px,5vw,72px) 32px;border-top:1px solid rgba(239,230,214,.1);display:flex;flex-direction:column;gap:20px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a8275">
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px">
+    <span style="font-family:'Playfair Display',serif;font-size:18px;letter-spacing:.02em;text-transform:none;color:#bfb5a3">The Moorings Bar &amp; Restaurant</span>
+    <div style="display:flex;gap:28px"><a href="https://www.facebook.com" target="_blank" style="color:#8a8275">Facebook</a><a href="https://www.instagram.com" target="_blank" style="color:#8a8275">Instagram</a><a href="tel:+353719667622" style="color:#8a8275">Call</a></div>
+  </div>
+  <div style="font-size:12px;letter-spacing:.04em;text-transform:none;line-height:1.6;color:#6f685d;border-top:1px solid rgba(239,230,214,.06);padding-top:16px;text-wrap:pretty">Design preview only — not the official website of The Moorings. Phone number, prices and opening hours are placeholders and may not be accurate. Please check Google Maps for current details.</div>
+</footer>
+
+<a href="tel:+353719667622" class="m-sticky" style="position:fixed;left:16px;right:16px;bottom:16px;z-index:60;display:none;justify-content:center;padding:16px;background:#c9a05c;color:#0b0e13;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 20px 40px -10px rgba(0,0,0,.7)">Call +353 71 966 7622</a>
+</div>
+<script>
+(function(){
+  const S = { N: 72, frames: [], cur: -1, lastIdx: 0, props: { motion: 'full' } };
+  const bar = document.querySelector('[data-loader] div div');
+  S.setState = o => { if (o.loaded != null && bar) bar.style.width = Math.round(o.loaded / S.N * 100) + '%'; };
+  S.loadFrames = function(){
+    let done = 0; const N = this.N;
+    const first = new Promise(res => { for (let i = 0; i < N; i++) { const im = new Image(); im.src = `./assets/seq/f${String(i).padStart(3, '0')}.jpg`; im.onload = im.onerror = () => { done++; this.setState({ loaded: done }); if (done === 12) res(); if (done === N) this.ready = true; }; this.frames.push(im); } });
+    first.then(() => { this.initCanvas(); this.initScroll(); this.hideLoader(); });};
+  S.hideLoader = function(){
+    const el = document.querySelector('[data-loader]'); if (!el) return;
+    window.gsap.to(el, { opacity: 0, duration: .8, ease: 'power2.out', delay: .2, onComplete: () => { el.style.display = 'none'; this.introAnim(); } });};
+  S.introAnim = function(){
+    window.gsap.from('[data-h1]', { y: 40, opacity: 0, duration: 1.2, stagger: .1, ease: 'power4.out' });};
+  S.initCanvas = function(){
+    const c = document.querySelector('[data-canvas]'); this.canvas = c; this.ctx = c.getContext('2d', { alpha: false });
+    const size = () => { const dpr = Math.min(1.5, devicePixelRatio || 1); c.width = c.clientWidth * dpr; c.height = c.clientHeight * dpr; this.cur = -1; this.draw(this.lastIdx || 0); };
+    size(); this.onCanvasRs = size; window.addEventListener('resize', size);};
+  S.draw = function(i){
+    const ok = k => this.frames[k] && this.frames[k].complete && this.frames[k].naturalWidth;
+    let k = i; while (k >= 0 && !ok(k)) k--; if (k < 0) return;
+    if (k === this.cur) return; this.cur = k; this.lastIdx = i;
+    const img = this.frames[k];
+    const c = this.canvas, ctx = this.ctx, W = c.width, H = c.height;
+    const s = Math.max(W / img.naturalWidth, H / img.naturalHeight), w = img.naturalWidth * s, h = img.naturalHeight * s;
+    ctx.fillStyle = '#0b0e13'; ctx.fillRect(0, 0, W, H);
+    ctx.drawImage(img, (W - w) / 2, (H - h) / 2, w, h);};
+  S.initScroll = function(){
+    const gsap = window.gsap, ST = window.ScrollTrigger, motion = (this.props.motion ?? 'full') !== 'off';
+    const N = this.N, prox = { f: 0 };
+    gsap.to(prox, { f: N - 1, ease: 'none', scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom bottom', scrub: 0.4 }, onUpdate: () => this.draw(Math.round(prox.f)) });
+    const tl = gsap.timeline({ scrollTrigger: { trigger: '[data-hero]', start: 'top top', end: 'bottom bottom', scrub: 0.3 } });
+    tl.to('[data-act="1"]', { opacity: 0, y: -60, duration: .18, ease: 'power1.in' }, .05)
+      .fromTo('[data-dim]', { opacity: 0 }, { opacity: 1, duration: .12, ease: 'none' }, .28)
+      .fromTo('[data-act="2"]', { opacity: 0, scale: .96 }, { opacity: 1, scale: 1, duration: .15, ease: 'power2.out' }, .32)
+      .to('[data-act="2"]', { opacity: 0, y: -40, duration: .14, ease: 'power1.in' }, .58)
+      .to('[data-dim]', { opacity: .35, duration: .12, ease: 'none' }, .6)
+      .fromTo('[data-act="3"]', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .18, ease: 'power2.out' }, .78);
+    const nav = document.querySelector('[data-nav]');
+    const heroEl = document.querySelector('[data-hero]');
+    const navUpd = () => { const on = heroEl.getBoundingClientRect().bottom <= window.innerHeight + 2; nav.style.background = on ? 'rgba(11,14,19,.72)' : 'transparent'; nav.style.backdropFilter = on ? 'blur(14px)' : 'none'; nav.style.padding = on ? '14px clamp(20px,5vw,72px)' : '20px clamp(20px,5vw,72px)'; };
+    ST.create({ start: 0, end: 'max', onUpdate: navUpd }); navUpd();
+    document.querySelectorAll('[data-reveal]').forEach(el => gsap.from(el, { y: 36, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } }));
+    document.querySelectorAll('[data-mask]').forEach(el => { gsap.fromTo(el, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 1.4, ease: 'power4.out', scrollTrigger: { trigger: el, start: 'top 85%' } }); const im = el.querySelector('img'); if (im && motion) gsap.fromTo(im, { scale: 1.2 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } }); });
+    const split = document.querySelector('[data-split]');
+    if (split) { const words = split.innerHTML.split(/(<[^>]+>|\s+)/).filter(Boolean); let html = '', open = ''; words.forEach(w => { if (/^<[^>]+>$/.test(w)) { html += w; return; } if (/^\s+$/.test(w)) { html += ' '; return; } html += `<span data-w style="display:inline-block;opacity:.15">${w}</span>`; }); split.innerHTML = html; gsap.to(split.querySelectorAll('[data-w]'), { opacity: 1, stagger: .03, ease: 'none', scrollTrigger: { trigger: split, start: 'top 80%', end: 'bottom 50%', scrub: true } }); }
+    if (motion) {
+      document.querySelectorAll('[data-room]').forEach(room => { const im = room.querySelector('[data-room-img]'); gsap.fromTo(im, { yPercent: -8 }, { yPercent: 8, ease: 'none', scrollTrigger: { trigger: room, start: 'top bottom', end: 'bottom top', scrub: true } }); });
+      document.querySelectorAll('[data-parallax]').forEach(el => gsap.fromTo(el, { y: Number(el.dataset.parallax) }, { y: -Number(el.dataset.parallax), ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } }));
+      gsap.fromTo('[data-visit-img]', { yPercent: -8 }, { yPercent: 6, ease: 'none', scrollTrigger: { trigger: '#visit', start: 'top bottom', end: 'bottom top', scrub: true } });
+    }
+    const track = document.querySelector('[data-menu-track]');
+    const dist = () => Math.max(0, track.scrollWidth - window.innerWidth);
+    gsap.to(track, { x: () => -dist(), ease: 'none', scrollTrigger: { trigger: '[data-menu]', start: 'top top', end: () => '+=' + dist(), pin: '[data-menu-pin]', scrub: 1, invalidateOnRefresh: true, anticipatePin: 1 } });
+    const mq = document.querySelector('[data-marquee]');
+    gsap.fromTo(mq, { x: 0 }, { x: () => -(mq.scrollWidth - window.innerWidth), ease: 'none', scrollTrigger: { trigger: mq, start: 'top bottom', end: 'bottom top', scrub: 1, invalidateOnRefresh: true } });
+    setTimeout(() => ST.refresh(), 600);};
+  function boot(){ if (!(window.gsap && window.ScrollTrigger)) return setTimeout(boot, 50); gsap.registerPlugin(ScrollTrigger); S.loadFrames(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+})();</script>
+</body>
+</html>
