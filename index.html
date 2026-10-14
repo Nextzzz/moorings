@@ -25,6 +25,15 @@ img{display:block}
 /* hero copy stays hidden until the intro animation runs (no flash through the loader) */
 .js [data-h1]{opacity:0}
 .hero-scrim{position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(11,14,19,.88) 0%,rgba(11,14,19,.54) 30%,rgba(11,14,19,.16) 62%,rgba(11,14,19,0) 88%)}
+/* mobile nav: links collapse into a dropdown opened from the right */
+.m-navtoggle{display:none;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:44px;height:44px;margin:-9px -10px -9px 0;padding:0;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.m-navtoggle span{display:block;width:22px;height:1.5px;background:#efe6d6;transition:transform .32s cubic-bezier(.2,.8,.2,1)}
+.m-navtoggle[aria-expanded="true"] span:nth-child(1){transform:translateY(3.75px) rotate(45deg)}
+.m-navtoggle[aria-expanded="true"] span:nth-child(2){transform:translateY(-3.75px) rotate(-45deg)}
+.m-navpanel{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:4px 20px 18px;background:rgba(11,14,19,.97);backdrop-filter:blur(16px);border-top:1px solid rgba(239,230,214,.08);box-shadow:0 24px 40px -24px rgba(0,0,0,.9);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s ease,transform .36s cubic-bezier(.2,.8,.2,1),visibility .36s}
+.m-navpanel[data-open="true"]{opacity:1;visibility:visible;transform:translateY(0)}
+.m-navpanel a{display:block;padding:16px 2px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#efe6d6;border-bottom:1px solid rgba(239,230,214,.08)}
+.m-navpanel .m-navcall{margin-top:18px;padding:16px;text-align:center;letter-spacing:.14em;color:#edc488;border:1px solid rgba(201,160,92,.55)}
 @keyframes grain{0%,100%{transform:translate(0,0)}20%{transform:translate(-2%,1%)}40%{transform:translate(1%,-2%)}60%{transform:translate(-1%,2%)}80%{transform:translate(2%,-1%)}}
 .h1:hover{background:#c9a05c !important;color:#0b0e13 !important}
 .h2:hover{transform:scale(1.04) !important}
@@ -38,6 +47,9 @@ img{display:block}
 @media (max-width:759px){
   .m-sticky{display:flex !important}
   .m-navlinks{display:none !important}
+  .m-navcta{display:none !important}
+  .m-navtoggle{display:flex}
+  .m-navpanel{display:flex}
   .m-footer{padding-bottom:96px !important}
   .m-gcA{grid-column:span 12 !important}
   .m-gcB{grid-column:span 7 !important;margin-top:0 !important}
@@ -79,7 +91,12 @@ img{display:block}
   <div class="m-navlinks" style="display:flex;gap:32px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#bfb5a3">
     <a href="#rooms" style="color:#bfb5a3">Rooms</a><a href="#menu" style="color:#bfb5a3">Menu</a><a href="#bar" style="color:#bfb5a3">Bar</a><a href="#visit" style="color:#bfb5a3">Visit</a>
   </div>
-  <a href="tel:+353719667622" style="display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid rgba(201,160,92,.6);color:#efe6d6;font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;transition:background .3s,color .3s"  class="h1">Book by phone</a>
+  <a href="tel:+353719667622" style="display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid rgba(201,160,92,.6);color:#efe6d6;font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;transition:background .3s,color .3s"  class="h1 m-navcta">Book by phone</a>
+  <button data-nav-toggle class="m-navtoggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  <div data-nav-panel id="mobile-menu" class="m-navpanel">
+    <a href="#rooms">Rooms</a><a href="#menu">Menu</a><a href="#bar">Bar</a><a href="#visit">Visit</a>
+    <a href="tel:+353719667622" class="m-navcall">Call +353 71 966 7622</a>
+  </div>
 </nav>
 
 <!-- HERO: scroll-scrub frame sequence -->
@@ -344,6 +361,28 @@ img{display:block}
   S.introAnim = function(){
     window.gsap.fromTo('[data-h1]', { y: 40, opacity: 0 }, { y: 0, opacity: 1, duration: 1.2, stagger: .1, ease: 'power4.out' });};
   S.revealCopy = function(){ document.querySelectorAll('[data-h1]').forEach(el => { el.style.opacity = '1'; }); };
+  S.initNav = function(){
+    const nav = document.querySelector('[data-nav]'), toggle = document.querySelector('[data-nav-toggle]'), panel = document.querySelector('[data-nav-panel]');
+    const setMenu = open => { this.menuOpen = open; toggle.setAttribute('aria-expanded', open ? 'true' : 'false'); toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu'); panel.setAttribute('data-open', open ? 'true' : 'false'); if (this.navUpd) this.navUpd(); };
+    setMenu(false);
+    toggle.addEventListener('click', e => { e.stopPropagation(); setMenu(!this.menuOpen); });
+    panel.addEventListener('click', e => e.stopPropagation());
+    document.addEventListener('click', () => { if (this.menuOpen) setMenu(false); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape' && this.menuOpen) setMenu(false); });
+    window.addEventListener('resize', () => { if (window.innerWidth >= 760 && this.menuOpen) setMenu(false); });
+    const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const stop = () => { if (this.navTween) { this.navTween.kill(); this.navTween = null; } };
+    ['wheel', 'touchstart'].forEach(ev => window.addEventListener(ev, stop, { passive: true }));
+    document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
+      const id = a.getAttribute('href'); if (!id || id.length < 2) return;
+      const target = document.querySelector(id); if (!target) return;
+      e.preventDefault(); setMenu(false);
+      const y = Math.max(0, Math.round(target.getBoundingClientRect().top + window.scrollY - (id === '#top' ? 0 : nav.offsetHeight)));
+      if (reduce || !window.gsap) { window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' }); return; }
+      stop();
+      const from = window.scrollY, o = { p: 0 };
+      this.navTween = window.gsap.to(o, { p: 1, duration: Math.min(1.5, Math.max(.5, Math.abs(y - from) / 2600)), ease: 'power2.inOut', onUpdate: () => window.scrollTo(0, from + (y - from) * o.p), onComplete: () => { this.navTween = null; } });
+    }));};
   S.initCanvas = function(){
     const c = document.querySelector('[data-canvas]'); this.canvas = c; this.ctx = c.getContext('2d', { alpha: false });
     const size = () => { const dpr = Math.min(1.5, devicePixelRatio || 1); c.width = c.clientWidth * dpr; c.height = c.clientHeight * dpr; this.cur = -1; this.draw(this.lastIdx || 0); };
@@ -371,8 +410,9 @@ img{display:block}
       .fromTo('[data-act="3"]', { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: .18, ease: 'power2.out' }, .78);
     const nav = document.querySelector('[data-nav]');
     const heroEl = document.querySelector('[data-hero]');
-    const navUpd = () => { const on = heroEl.getBoundingClientRect().bottom <= window.innerHeight + 2; nav.style.background = on ? 'rgba(11,14,19,.72)' : 'transparent'; nav.style.backdropFilter = on ? 'blur(14px)' : 'none'; nav.style.padding = on ? '14px clamp(20px,5vw,72px)' : '20px clamp(20px,5vw,72px)'; };
+    const navUpd = () => { const on = heroEl.getBoundingClientRect().bottom <= window.innerHeight + 2 || this.menuOpen; nav.style.background = on ? 'rgba(11,14,19,.72)' : 'transparent'; nav.style.backdropFilter = on ? 'blur(14px)' : 'none'; nav.style.padding = on ? '14px clamp(20px,5vw,72px)' : '20px clamp(20px,5vw,72px)'; };
     const stk = document.querySelector('[data-sticky]'); const stkUpd = () => { if (!stk) return; const on = heroEl.getBoundingClientRect().bottom <= window.innerHeight + 2; stk.style.opacity = on ? 1 : 0; stk.style.transform = on ? 'none' : 'translateY(20px)'; stk.style.pointerEvents = on ? 'auto' : 'none'; };
+    this.navUpd = navUpd;
     ST.create({ start: 0, end: 'max', onUpdate: () => { navUpd(); stkUpd(); } }); navUpd(); stkUpd();
     document.querySelectorAll('[data-reveal]').forEach(el => gsap.from(el, { y: 36, opacity: 0, duration: 1.1, ease: 'power3.out', scrollTrigger: { trigger: el, start: 'top 88%' } }));
     document.querySelectorAll('[data-mask]').forEach(el => { gsap.fromTo(el, { clipPath: 'inset(0 0 100% 0)' }, { clipPath: 'inset(0 0 0% 0)', duration: 1.4, ease: 'power4.out', scrollTrigger: { trigger: el, start: 'top 85%' } }); const im = el.querySelector('img'); if (im && motion) gsap.fromTo(im, { scale: 1.2 }, { scale: 1, ease: 'none', scrollTrigger: { trigger: el, start: 'top bottom', end: 'bottom top', scrub: true } }); });
@@ -393,7 +433,8 @@ img{display:block}
     setTimeout(() => ST.refresh(), 600);};
   const t0 = Date.now();
   function boot(){ if (!(window.gsap && window.ScrollTrigger)) { if (Date.now() - t0 > 5000) return S.revealCopy(); return setTimeout(boot, 50); } gsap.registerPlugin(ScrollTrigger); S.loadFrames(); }
-  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', boot); else boot();
+  function start(){ S.initNav(); boot(); }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', start); else start();
 })();</script>
 </body>
 </html>
