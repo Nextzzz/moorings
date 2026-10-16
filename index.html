@@ -43,6 +43,7 @@ img{display:block}
 .h6:hover{transform:scale(1.04) !important}
 .h7:hover{transform:scale(1.04) !important}
 .h8:hover{background:#c9a05c !important;color:#0b0e13 !important}
+.h9:hover{background:#c9a05c !important;color:#0b0e13 !important}
 
 @media (max-width:759px){
   .m-sticky{display:flex !important}
@@ -89,12 +90,12 @@ img{display:block}
 <nav data-nav style="position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:20px clamp(20px,5vw,72px);transition:background .5s,backdrop-filter .5s,padding .5s">
   <a href="#top" style="font-family:'Playfair Display',serif;font-size:22px;letter-spacing:.03em;color:#efe6d6">The Moorings</a>
   <div class="m-navlinks" style="display:flex;gap:32px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:#bfb5a3">
-    <a href="#rooms" style="color:#bfb5a3">Rooms</a><a href="#menu" style="color:#bfb5a3">Menu</a><a href="#bar" style="color:#bfb5a3">Bar</a><a href="#visit" style="color:#bfb5a3">Visit</a>
+    <a href="#rooms" style="color:#bfb5a3">Rooms</a><a href="./menu.html" style="color:#bfb5a3">Menu</a><a href="#bar" style="color:#bfb5a3">Bar</a><a href="#visit" style="color:#bfb5a3">Visit</a>
   </div>
   <a href="tel:+353719667622" style="display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid rgba(201,160,92,.6);color:#efe6d6;font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;transition:background .3s,color .3s"  class="h1 m-navcta">Book by phone</a>
   <button data-nav-toggle class="m-navtoggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
   <div data-nav-panel id="mobile-menu" class="m-navpanel">
-    <a href="#rooms">Rooms</a><a href="#menu">Menu</a><a href="#bar">Bar</a><a href="#visit">Visit</a>
+    <a href="#rooms">Rooms</a><a href="./menu.html">Menu</a><a href="#bar">Bar</a><a href="#visit">Visit</a>
     <a href="tel:+353719667622" class="m-navcall">Call +353 71 966 7622</a>
   </div>
 </nav>
@@ -178,7 +179,7 @@ img{display:block}
   <div data-menu-pin style="height:100vh;display:flex;flex-direction:column;justify-content:center;gap:clamp(20px,4vh,40px)">
     <div style="padding:0 clamp(20px,5vw,72px);display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap">
       <div><div style="font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:14px">From the kitchen</div><h2 style="font-family:'Playfair Display',serif;font-weight:400;font-size:clamp(40px,5.5vw,88px);line-height:.95;margin:0;letter-spacing:-.02em">What to order</h2></div>
-      <div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a8275">Scroll →</div>
+      <div style="display:flex;align-items:center;gap:18px;flex-wrap:wrap"><a href="./menu.html" class="h9" style="display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border:1px solid rgba(201,160,92,.6);color:#efe6d6;font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;transition:background .3s,color .3s">See the full menu <span>→</span></a><div style="font-size:12px;letter-spacing:.2em;text-transform:uppercase;color:#8a8275">Scroll →</div></div>
     </div>
     <div data-menu-track style="display:flex;gap:clamp(16px,2vw,32px);width:max-content;padding-left:clamp(20px,5vw,72px);will-change:transform">
       
@@ -232,6 +233,7 @@ img{display:block}
       
       <div style="width:min(78vw,620px);flex:none;display:flex;flex-direction:column;justify-content:center;gap:20px;padding:0 clamp(20px,5vw,72px) 0 20px">
         <div style="font-family:'Playfair Display',serif;font-size:clamp(28px,3vw,44px);line-height:1.1;text-wrap:balance">Full Irish from 10am at weekends. Specials on the board. Kids' menu, always.</div>
+        <a href="./menu.html" style="display:inline-flex;align-items:center;gap:12px;align-self:flex-start;padding:16px 26px;background:#efe6d6;color:#0b0e13;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase">See the full menu →</a>
         <a href="tel:+353719667622" style="display:inline-flex;align-items:center;gap:12px;align-self:flex-start;padding:16px 26px;border:1px solid rgba(201,160,92,.6);color:#efe6d6;font-size:12px;letter-spacing:.14em;text-transform:uppercase"  class="h8">Call +353 71 966 7622 →</a>
       </div>
     </div>
@@ -371,13 +373,25 @@ img{display:block}
     document.addEventListener('keydown', e => { if (e.key === 'Escape' && this.menuOpen) setMenu(false); });
     window.addEventListener('resize', () => { if (window.innerWidth >= 760 && this.menuOpen) setMenu(false); });
     const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-    const stop = () => { if (this.navTween) { this.navTween.kill(); this.navTween = null; } };
+    const stop = () => { this.userInput = true; if (this.navTween) { this.navTween.kill(); this.navTween = null; } };
     ['wheel', 'touchstart'].forEach(ev => window.addEventListener(ev, stop, { passive: true }));
+    this.anchorY = (target, id) => Math.max(0, Math.round(target.getBoundingClientRect().top + window.scrollY - (id === '#top' ? 0 : nav.offsetHeight)));
+    /* landing here from menu.html: the hash lands under the fixed nav, and the pins shift layout */
+    this.landOnHash = () => {
+      const id = location.hash;
+      if (!id || id.length < 2 || this.userInput || this.hashLanded) return;
+      let target = null;
+      try { target = document.querySelector(id); } catch (e) { return; }
+      if (!target) return;
+      this.hashLanded = true;
+      window.scrollTo(0, this.anchorY(target, id));
+    };
+    if (location.hash) window.addEventListener('load', () => setTimeout(() => this.landOnHash(), 80));
     document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', e => {
       const id = a.getAttribute('href'); if (!id || id.length < 2) return;
       const target = document.querySelector(id); if (!target) return;
       e.preventDefault(); setMenu(false);
-      const y = Math.max(0, Math.round(target.getBoundingClientRect().top + window.scrollY - (id === '#top' ? 0 : nav.offsetHeight)));
+      const y = this.anchorY(target, id);
       if (reduce || !window.gsap) { window.scrollTo({ top: y, behavior: reduce ? 'auto' : 'smooth' }); return; }
       stop();
       const from = window.scrollY, o = { p: 0 };
@@ -430,7 +444,7 @@ img{display:block}
     }
     const mq = document.querySelector('[data-marquee]');
     if (window.innerWidth < 760) { mq.style.width = '100%'; mq.style.overflowX = 'auto'; mq.style.scrollSnapType = 'x mandatory'; mq.style.padding = '0 20px 12px'; mq.style.scrollPaddingLeft = '20px'; mq.querySelectorAll(':scope > div').forEach(c => { c.style.scrollSnapAlign = 'start'; }); } else gsap.fromTo(mq, { x: 0 }, { x: () => -(mq.scrollWidth - window.innerWidth), ease: 'none', scrollTrigger: { trigger: mq, start: 'top bottom', end: 'bottom top', scrub: 1, invalidateOnRefresh: true } });
-    setTimeout(() => ST.refresh(), 600);};
+    setTimeout(() => { ST.refresh(); if (this.landOnHash) { this.hashLanded = false; this.landOnHash(); } }, 600);};
   const t0 = Date.now();
   function boot(){ if (!(window.gsap && window.ScrollTrigger)) { if (Date.now() - t0 > 5000) return S.revealCopy(); return setTimeout(boot, 50); } gsap.registerPlugin(ScrollTrigger); S.loadFrames(); }
   function start(){ S.initNav(); boot(); }

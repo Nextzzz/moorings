@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script>document.documentElement.classList.add("js")</script>
+<title>Menu — The Moorings Bar &amp; Restaurant, Knockvicar</title>
+<meta name="description" content="The full food and drink menu at The Moorings, Lough Key Marina, Knockvicar. Flame-grilled skewers, slow pork ribs, lamb shanks, burgers, desserts, a proper pint and a whiskey shelf.">
+<meta property="og:title" content="Menu — The Moorings Bar &amp; Restaurant">
+<meta property="og:description" content="Cooked over fire, served on the water. The full menu at Lough Key Marina, Knockvicar.">
+<meta property="og:image" content="./assets/table.jpg">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230b0e13'/><text x='32' y='44' font-family='Georgia,serif' font-size='40' fill='%23c9a05c' text-anchor='middle'>M</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--nav-h:56px;--cat-h:53px}
+html,body{margin:0;padding:0;background:#0b0e13;color:#efe6d6;font-family:'Instrument Sans',sans-serif;-webkit-font-smoothing:antialiased}
+*{box-sizing:border-box}
+[hidden]{display:none !important}
+a{color:#c9a05c;text-decoration:none}
+::selection{background:#a8432f;color:#fff}
+img{display:block}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:400;letter-spacing:-.02em;margin:0}
+
+/* nav — solid on this page, there is no full-bleed hero behind it */
+nav[data-nav]{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-items:center;justify-content:space-between;gap:16px;padding:14px clamp(20px,5vw,72px);background:rgba(11,14,19,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(239,230,214,.08)}
+.brand{font-family:'Playfair Display',serif;font-size:22px;letter-spacing:.03em;color:#efe6d6}
+.navlinks{display:flex;gap:32px;font-size:12px;letter-spacing:.18em;text-transform:uppercase}
+.navlinks a{color:#bfb5a3;transition:color .3s}
+.navlinks a:hover{color:#efe6d6}
+.navlinks a[aria-current="page"]{color:#c9a05c}
+.navcta{display:inline-flex;align-items:center;gap:10px;padding:12px 20px;border:1px solid rgba(201,160,92,.6);color:#efe6d6;font-size:12px;letter-spacing:.14em;text-transform:uppercase;white-space:nowrap;transition:background .3s,color .3s}
+.navcta:hover{background:#c9a05c;color:#0b0e13}
+.m-navtoggle{display:none;flex-direction:column;align-items:center;justify-content:center;gap:6px;width:44px;height:44px;margin:-9px -10px -9px 0;padding:0;background:none;border:0;cursor:pointer;-webkit-tap-highlight-color:transparent}
+.m-navtoggle span{display:block;width:22px;height:1.5px;background:#efe6d6;transition:transform .32s cubic-bezier(.2,.8,.2,1)}
+.m-navtoggle[aria-expanded="true"] span:nth-child(1){transform:translateY(3.75px) rotate(45deg)}
+.m-navtoggle[aria-expanded="true"] span:nth-child(2){transform:translateY(-3.75px) rotate(-45deg)}
+.m-navpanel{display:none;position:absolute;top:100%;left:0;right:0;flex-direction:column;padding:4px 20px 18px;background:rgba(11,14,19,.97);backdrop-filter:blur(16px);border-top:1px solid rgba(239,230,214,.08);box-shadow:0 24px 40px -24px rgba(0,0,0,.9);opacity:0;visibility:hidden;transform:translateY(-10px);transition:opacity .3s ease,transform .36s cubic-bezier(.2,.8,.2,1),visibility .36s}
+.m-navpanel[data-open="true"]{opacity:1;visibility:visible;transform:translateY(0)}
+.m-navpanel a{display:block;padding:16px 2px;font-size:13px;letter-spacing:.2em;text-transform:uppercase;color:#efe6d6;border-bottom:1px solid rgba(239,230,214,.08)}
+.m-navpanel a[aria-current="page"]{color:#c9a05c}
+.m-navpanel .m-navcall{margin-top:18px;padding:16px;text-align:center;letter-spacing:.14em;color:#edc488;border:1px solid rgba(201,160,92,.55)}
+
+/* page header */
+.page-head{padding:calc(var(--nav-h) + clamp(48px,8vw,96px)) clamp(20px,5vw,72px) clamp(32px,4vw,56px);max-width:1400px;margin:0 auto}
+.eyebrow{display:flex;align-items:center;gap:14px;font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c;margin-bottom:20px}
+.eyebrow i{width:40px;height:1px;background:#c9a05c;flex:none}
+.page-head h1{font-size:clamp(48px,9vw,132px);line-height:.92}
+.lede{margin:26px 0 0;max-width:62ch;font-size:clamp(16px,1.5vw,19px);line-height:1.65;color:#d8cfbe;text-wrap:pretty}
+.back{display:inline-flex;align-items:center;gap:10px;margin-top:30px;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:#bfb5a3;transition:color .3s}
+.back:hover{color:#efe6d6}
+.hero-strip{position:relative;margin-top:clamp(36px,5vw,64px);aspect-ratio:21/9;min-height:220px;overflow:hidden;background:#141922}
+.hero-strip img{width:100%;height:100%;object-fit:cover}
+.hero-strip::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(11,14,19,.8) 0%,rgba(11,14,19,.1) 60%,rgba(11,14,19,.25) 100%)}
+
+/* sticky bar: categories + search */
+.catbar{position:sticky;top:var(--nav-h);z-index:40;background:rgba(11,14,19,.95);backdrop-filter:blur(14px);border-top:1px solid rgba(239,230,214,.08);border-bottom:1px solid rgba(239,230,214,.08)}
+.catbar-row{display:flex;align-items:center;gap:18px;padding:10px clamp(20px,5vw,72px)}
+.chips{flex:1 1 auto;min-width:0;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:1px 0}
+.chips::-webkit-scrollbar{display:none}
+.chip{flex:none;padding:9px 16px;border:1px solid rgba(239,230,214,.18);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#bfb5a3;white-space:nowrap;transition:background .3s,color .3s,border-color .3s}
+.chip:hover{color:#efe6d6;border-color:rgba(239,230,214,.45)}
+.chip[aria-current="true"]{background:#c9a05c;border-color:#c9a05c;color:#0b0e13}
+.search{flex:0 0 auto;position:relative;width:260px}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:#8a8275;fill:none;stroke-width:1.8;pointer-events:none}
+.search input{width:100%;height:40px;padding:0 38px 0 36px;background:rgba(239,230,214,.05);border:1px solid rgba(239,230,214,.18);color:#efe6d6;font-family:inherit;font-size:13px;letter-spacing:.02em;outline:none;transition:border-color .3s,background .3s;-webkit-appearance:none;appearance:none}
+.search input::placeholder{color:#8a8275}
+.search input::-webkit-search-cancel-button{display:none}
+.search input:focus{border-color:rgba(201,160,92,.75);background:rgba(239,230,214,.08)}
+.search button{position:absolute;right:4px;top:50%;transform:translateY(-50%);width:30px;height:30px;display:none;align-items:center;justify-content:center;background:none;border:0;color:#bfb5a3;font-size:19px;line-height:1;cursor:pointer}
+.search button:hover{color:#efe6d6}
+.search[data-filled="true"] button{display:flex}
+
+main{padding:0 clamp(20px,5vw,72px) clamp(80px,10vw,140px);max-width:1400px;margin:0 auto}
+.cat{padding-top:clamp(56px,7vw,104px);scroll-margin-top:calc(var(--nav-h) + var(--cat-h))}
+.cat-head{display:grid;gap:14px;padding-bottom:clamp(28px,3.5vw,44px);border-bottom:1px solid rgba(239,230,214,.12);margin-bottom:clamp(28px,3.5vw,44px)}
+.cat-num{font-size:11px;letter-spacing:.3em;text-transform:uppercase;color:#c9a05c}
+.cat-head h2{font-size:clamp(34px,5vw,72px);line-height:.98}
+.cat-head p{margin:0;max-width:56ch;font-size:15px;line-height:1.6;color:#bfb5a3;text-wrap:pretty}
+
+.cards{columns:1;column-gap:clamp(16px,2vw,28px)}
+@media (min-width:680px){.cards{columns:2}}
+@media (min-width:1100px){.cards{columns:3}}
+.card{break-inside:avoid;-webkit-column-break-inside:avoid;page-break-inside:avoid;display:block;margin:0 0 clamp(16px,2vw,28px);border:1px solid rgba(239,230,214,.12);background:#10151d;opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.8,.2,1),border-color .4s}
+.card.in{opacity:1;transform:none}
+.card:hover{border-color:rgba(201,160,92,.45)}
+.card-img{position:relative;aspect-ratio:3/2;overflow:hidden;background:#141922}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.2,.8,.2,1)}
+.card:hover .card-img img{transform:scale(1.05)}
+.card-body{padding:22px}
+.card-head{display:flex;justify-content:space-between;align-items:baseline;gap:14px}
+.card-head h3{font-size:clamp(19px,1.7vw,24px);line-height:1.15;letter-spacing:-.01em}
+.price{font-family:'Playfair Display',serif;font-size:19px;color:#c9a05c;white-space:nowrap}
+.card-body p{margin:10px 0 0;font-size:14px;line-height:1.6;color:#bfb5a3;text-wrap:pretty}
+.tags{display:flex;gap:8px;margin-top:16px}
+.tags span{font-size:10px;letter-spacing:.16em;padding:4px 8px;border:1px solid rgba(239,230,214,.2);color:#8a8275}
+mark{background:rgba(201,160,92,.28);color:#efe6d6;padding:0 1px}
+
+.empty{padding:clamp(56px,9vw,120px) 0;text-align:center;display:grid;gap:18px;justify-items:center}
+.empty h2{font-size:clamp(26px,3.4vw,42px)}
+.empty p{margin:0;color:#bfb5a3;font-size:15px}
+
+.note{margin-top:clamp(64px,8vw,120px);padding:clamp(32px,4vw,56px);background:#16233a;display:grid;gap:26px}
+.note h2{font-size:clamp(28px,3.4vw,46px);line-height:1.1;max-width:20ch;text-wrap:balance}
+.note ul{margin:0;padding:0;list-style:none;display:grid;gap:14px;font-size:15px;line-height:1.5;color:#d8cfbe}
+.note li{display:grid;grid-template-columns:minmax(110px,auto) 1fr;gap:6px 20px}
+.note li b{font-weight:500;color:#efe6d6}
+.actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:4px}
+.btn-solid{display:inline-flex;align-items:center;gap:12px;padding:18px 30px;background:#efe6d6;color:#0b0e13;font-weight:600;font-size:13px;letter-spacing:.12em;text-transform:uppercase}
+.btn-ghost{display:inline-flex;align-items:center;gap:12px;padding:18px 30px;border:1px solid rgba(239,230,214,.35);color:#efe6d6;font-size:13px;letter-spacing:.12em;text-transform:uppercase;transition:background .3s,color .3s}
+.btn-ghost:hover{background:#efe6d6;color:#0b0e13}
+.legend{margin-top:clamp(40px,5vw,64px);display:flex;flex-wrap:wrap;gap:10px 28px;font-size:12px;letter-spacing:.08em;color:#8a8275}
+.legend b{color:#bfb5a3;font-weight:500;letter-spacing:.16em}
+
+footer{padding:32px clamp(20px,5vw,72px);border-top:1px solid rgba(239,230,214,.1);display:flex;flex-direction:column;gap:20px;font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:#8a8275}
+footer a{color:#8a8275}
+.fine{font-size:12px;letter-spacing:.04em;text-transform:none;line-height:1.6;color:#6f685d;border-top:1px solid rgba(239,230,214,.06);padding-top:16px;text-wrap:pretty}
+.m-sticky{display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:60;justify-content:center;padding:16px;background:#c9a05c;color:#0b0e13;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 20px 40px -10px rgba(0,0,0,.7)}
+
+@media (max-width:899px){
+  .catbar-row{flex-direction:column-reverse;align-items:stretch;gap:9px;padding:9px clamp(20px,5vw,72px)}
+  .search{width:auto}
+  .search input{height:38px}
+}
+@media (max-width:759px){
+  .navlinks,.navcta{display:none}
+  .m-navtoggle,.m-navpanel{display:flex}
+  .m-sticky{display:flex}
+  footer{padding-bottom:96px}
+  .hero-strip{aspect-ratio:3/2}
+  .card-body{padding:20px}
+  .note li{grid-template-columns:1fr}
+}
+@media (prefers-reduced-motion:reduce){
+  .card{opacity:1;transform:none;transition:none}
+  .card-img img,.m-navtoggle span,.m-navpanel{transition:none}
+}
+</style>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Menu",
+ "name": "The Moorings — Food & Drink Menu",
+ "inLanguage": "en-IE",
+ "hasMenuSection": [
+  {
+   "@type": "MenuSection",
+   "name": "Starters",
+   "description": "Small things to share while the grill gets going.",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Seafood chowder",
+     "description": "Smoked haddock, salmon and prawns in a cream broth, with brown soda bread and butter.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€9.50",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Char-grilled wings",
+     "description": "Cajun-rubbed, blistered on the grill, with a house dip. Made for the bar, better with a pint.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€14",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Garlic mushrooms",
+     "description": "Pan-fried in garlic butter and cream, piled onto toasted sourdough.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€8.50",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Chicken goujons",
+     "description": "Buttermilk-marinated, crisp crumb, garlic mayo. The kids order them; the adults steal them.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€10",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Baked camembert",
+     "description": "Honey, thyme and toasted sourdough. Built for two, finished by one.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€12",
+      "priceCurrency": "EUR"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "From the fire",
+   "description": "Everything here meets an open flame before it meets a plate.",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Flame-grilled beef skewers",
+     "description": "Irish beef and red onion straight off the grill, chunky chips, peppercorn sauce, dressed leaves.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€24",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Slow pork ribs",
+     "description": "A full rack, sticky house glaze, chives, slaw and chips. The one guests write home about.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€22",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "10oz dry-aged sirloin",
+     "description": "Roast garlic butter, chunky chips, dressed leaves. Peppercorn or pepper sauce on the side.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€32",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Half rack & wings",
+     "description": "Half a rack of ribs, six char-grilled wings, chips and slaw. Order it hungry.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€24",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Mixed grill board",
+     "description": "Sirloin, ribs, a beef skewer, wings and chips on one board. For two, if you are honest about it.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€29",
+      "priceCurrency": "EUR"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "Burgers",
+   "description": "Irish beef, ground in-house, cooked over the same fire as everything else.",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "The Moorings Burger",
+     "description": "Two Irish beef patties, smoked cheddar, house sauce, lettuce, tomato, red onion and chips. No shortcuts.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€16",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Buttermilk chicken burger",
+     "description": "Crisp chicken thigh, slaw, pickles, garlic mayo, chips.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€15",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Portobello & halloumi",
+     "description": "Grilled portobello, halloumi, roast red pepper, basil mayo, chips.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€14",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Make it yours",
+     "description": "Smoked bacon, blue cheese, fried egg or extra cheddar — each.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€1.50",
+      "priceCurrency": "EUR"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "Mains",
+   "description": "The plates people drive fifteen minutes from Boyle for.",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Lamb shanks",
+     "description": "Braised till it slides off the bone, roasted garlic, red-wine jus. Order a glass of Rioja with it.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€26",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Beef & Guinness stew",
+     "description": "Slow-cooked shin, smoked bacon, mushrooms, champ and carrot mash. Winter in a bowl.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€19",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Fish & chips",
+     "description": "Beer-battered haddock, chunky chips, mushy peas and tartare sauce.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€18",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Chicken supreme",
+     "description": "Stuffed with sundried tomato and mozzarella, champ, tenderstem and a white wine cream.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€21",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Seafood linguine",
+     "description": "Prawns, mussels and salmon, chilli, garlic and white wine.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€22",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Chickpea & spinach curry",
+     "description": "Coconut, coriander and basmati, with warm naan.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€16",
+      "priceCurrency": "EUR"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "Sides",
+   "description": "All of it comes in a little metal bucket. We do not apologise.",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Chunky chips",
+     "description": "The ones in the bucket.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€4.50",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Skinny fries",
+     "description": "For the people who prefer them that way.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€4.50",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Champ",
+     "description": "Mash, scallions, far too much butter.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€4.50",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Onion rings",
+     "description": "Beer-battered, salted hot.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€5",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "House salad",
+     "description": "Dressed leaves, tomato, red onion, cucumber.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€4.50",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Garlic bread",
+     "description": "Add melted cheddar for a euro more.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€5",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Sauces",
+     "description": "Peppercorn, pepper, garlic butter or house dip.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€2.50",
+      "priceCurrency": "EUR"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "Desserts",
+   "description": "Nobody has ever regretted ordering two.",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Chocolate biscuit cake",
+     "description": "Dense, cold, the way it should be — vanilla ice cream and whipped cream. Share it or don’t.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€8",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Warm apple crumble",
+     "description": "Oat crumble, cinnamon, and your choice of custard or ice cream.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€7.50",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Baileys cheesecake",
+     "description": "Biscuit base, cream, a dusting of cocoa.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€8",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Sticky toffee pudding",
+     "description": "Butterscotch sauce and vanilla ice cream.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€8",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Ice cream sundae",
+     "description": "Three scoops, chocolate sauce, toasted nuts.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€6",
+      "priceCurrency": "EUR"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "From the bar",
+   "description": "Eleven taps, a proper whiskey shelf, and live music on Friday nights.",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Guinness",
+     "description": "Poured in two parts and left to settle. Worth the wait, every single time.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€5.90",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Irish whiskey",
+     "description": "Jameson, Teeling, Redbreast and Green Spot. Neat, over ice, or with a drop of water.",
+     "offers": {
+      "@type": "Offer",
+      "price": "from €6",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Craft & draught",
+     "description": "Rotating Irish taps alongside the usual suspects. Ask what is on — it changes with the season.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€5.50–€6.50",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "House wine",
+     "description": "Red, white or rosé. By the glass or by the bottle.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€7 / €26",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Piña Colada",
+     "description": "“Best Piña Colada around,” said a regular. We have decided to believe them.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€10",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Irish coffee",
+     "description": "Jameson, brown sugar, and cream floated on the back of a spoon.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€8",
+      "priceCurrency": "EUR"
+     }
+    }
+   ]
+  },
+  {
+   "@type": "MenuSection",
+   "name": "Soft drinks & coffee",
+   "description": "For the drivers, the designated, and anyone under eighteen.",
+   "hasMenuItem": [
+    {
+     "@type": "MenuItem",
+     "name": "Coca-Cola",
+     "description": "Regular or Diet, over plenty of ice with a wedge of lime.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€3.20",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Minerals",
+     "description": "7UP, Fanta, Club Orange, ginger ale, tonic.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€3",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Still or sparkling water",
+     "description": "Bottled and properly chilled. Tap water is free, always.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€2.80",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Fresh orange juice",
+     "description": "Squeezed that morning. Good with the Full Irish.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€3.50",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Tea or Americano",
+     "description": "Barry’s or Lyons, and we will not take sides.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€2.80",
+      "priceCurrency": "EUR"
+     }
+    },
+    {
+     "@type": "MenuItem",
+     "name": "Cappuccino or latte",
+     "description": "Oat or almond milk at no extra charge.",
+     "offers": {
+      "@type": "Offer",
+      "price": "€3.60",
+      "priceCurrency": "EUR"
+     }
+    }
+   ]
+  }
+ ]
+}
+</script>
+</head>
+<body>
+
+<nav data-nav>
+  <a href="./index.html" class="brand">The Moorings</a>
+  <div class="navlinks">
+    <a href="./index.html#rooms">Rooms</a><a href="./menu.html" aria-current="page">Menu</a><a href="./index.html#bar">Bar</a><a href="./index.html#visit">Visit</a>
+  </div>
+  <a href="tel:+353719667622" class="navcta">Book by phone</a>
+  <button data-nav-toggle class="m-navtoggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-menu"><span></span><span></span></button>
+  <div data-nav-panel id="mobile-menu" class="m-navpanel">
+    <a href="./index.html#rooms">Rooms</a><a href="./menu.html" aria-current="page">Menu</a><a href="./index.html#bar">Bar</a><a href="./index.html#visit">Visit</a>
+    <a href="tel:+353719667622" class="m-navcall">Call +353 71 966 7622</a>
+  </div>
+</nav>
+
+<header class="page-head">
+  <div class="eyebrow"><i></i>Food &amp; drink · Lough Key Marina</div>
+  <h1>The menu</h1>
+  <p class="lede">Everything is cooked to order over an open fire — so give us a few minutes, and have a pint while you wait. Specials go up on the board each evening, and the kitchen will happily work around allergies if you tell us before you order.</p>
+  <a class="back" href="./index.html">← Back to the landing page</a>
+  <div class="hero-strip"><img src="./assets/table.jpg" alt="A table of ribs, skewers, chips and drinks at The Moorings" fetchpriority="high"></div>
+</header>
+
+<div class="catbar">
+  <div class="catbar-row">
+    <div class="chips" data-chips><a class="chip" href="#starters">Starters</a><a class="chip" href="#fire">From the fire</a><a class="chip" href="#burgers">Burgers</a><a class="chip" href="#mains">Mains</a><a class="chip" href="#sides">Sides</a><a class="chip" href="#desserts">Desserts</a><a class="chip" href="#bar">From the bar</a><a class="chip" href="#soft">Soft drinks</a></div>
+    <div class="search" data-search-box>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+      <input type="search" data-search-input placeholder="Search the menu…" aria-label="Search the menu" autocomplete="off" spellcheck="false">
+      <button type="button" data-search-clear aria-label="Clear search">×</button>
+    </div>
+  </div>
+</div>
+
+<main>
+
+<section id="starters" class="cat" data-cat>
+  <header class="cat-head">
+    <div class="cat-num">01</div>
+    <h2>Starters</h2>
+    <p>Small things to share while the grill gets going.</p>
+  </header>
+  <div class="cards">
+    <article class="card" data-search="seafood chowder smoked haddock, salmon and prawns in a cream broth, with brown soda bread and butter. starters €9.50 "><div class="card-body"><div class="card-head"><h3>Seafood chowder</h3><span class="price">€9.50</span></div><p>Smoked haddock, salmon and prawns in a cream broth, with brown soda bread and butter.</p></div></article>
+    <article class="card" data-search="char-grilled wings cajun-rubbed, blistered on the grill, with a house dip. made for the bar, better with a pint. starters €14 "><div class="card-img"><img src="./assets/wings.jpg" alt="Char-grilled wings" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>Char-grilled wings</h3><span class="price">€14</span></div><p>Cajun-rubbed, blistered on the grill, with a house dip. Made for the bar, better with a pint.</p></div></article>
+    <article class="card" data-search="garlic mushrooms pan-fried in garlic butter and cream, piled onto toasted sourdough. starters €8.50 vegetarian"><div class="card-body"><div class="card-head"><h3>Garlic mushrooms</h3><span class="price">€8.50</span></div><p>Pan-fried in garlic butter and cream, piled onto toasted sourdough.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+    <article class="card" data-search="chicken goujons buttermilk-marinated, crisp crumb, garlic mayo. the kids order them; the adults steal them. starters €10 "><div class="card-body"><div class="card-head"><h3>Chicken goujons</h3><span class="price">€10</span></div><p>Buttermilk-marinated, crisp crumb, garlic mayo. The kids order them; the adults steal them.</p></div></article>
+    <article class="card" data-search="baked camembert honey, thyme and toasted sourdough. built for two, finished by one. starters €12 vegetarian"><div class="card-body"><div class="card-head"><h3>Baked camembert</h3><span class="price">€12</span></div><p>Honey, thyme and toasted sourdough. Built for two, finished by one.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+  </div>
+</section>
+
+<section id="fire" class="cat" data-cat>
+  <header class="cat-head">
+    <div class="cat-num">02</div>
+    <h2>From the fire</h2>
+    <p>Everything here meets an open flame before it meets a plate.</p>
+  </header>
+  <div class="cards">
+    <article class="card" data-search="flame-grilled beef skewers irish beef and red onion straight off the grill, chunky chips, peppercorn sauce, dressed leaves. from the fire €24 gluten free"><div class="card-img"><img src="./assets/skewers.jpg" alt="Flame-grilled beef skewers" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>Flame-grilled beef skewers</h3><span class="price">€24</span></div><p>Irish beef and red onion straight off the grill, chunky chips, peppercorn sauce, dressed leaves.</p><div class="tags"><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="slow pork ribs a full rack, sticky house glaze, chives, slaw and chips. the one guests write home about. from the fire €22 "><div class="card-img"><img src="./assets/ribs.jpg" alt="Slow pork ribs" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>Slow pork ribs</h3><span class="price">€22</span></div><p>A full rack, sticky house glaze, chives, slaw and chips. The one guests write home about.</p></div></article>
+    <article class="card" data-search="10oz dry-aged sirloin roast garlic butter, chunky chips, dressed leaves. peppercorn or pepper sauce on the side. from the fire €32 gluten free"><div class="card-body"><div class="card-head"><h3>10oz dry-aged sirloin</h3><span class="price">€32</span></div><p>Roast garlic butter, chunky chips, dressed leaves. Peppercorn or pepper sauce on the side.</p><div class="tags"><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="half rack &amp; wings half a rack of ribs, six char-grilled wings, chips and slaw. order it hungry. from the fire €24 "><div class="card-body"><div class="card-head"><h3>Half rack &amp; wings</h3><span class="price">€24</span></div><p>Half a rack of ribs, six char-grilled wings, chips and slaw. Order it hungry.</p></div></article>
+    <article class="card" data-search="mixed grill board sirloin, ribs, a beef skewer, wings and chips on one board. for two, if you are honest about it. from the fire €29 "><div class="card-body"><div class="card-head"><h3>Mixed grill board</h3><span class="price">€29</span></div><p>Sirloin, ribs, a beef skewer, wings and chips on one board. For two, if you are honest about it.</p></div></article>
+  </div>
+</section>
+
+<section id="burgers" class="cat" data-cat>
+  <header class="cat-head">
+    <div class="cat-num">03</div>
+    <h2>Burgers</h2>
+    <p>Irish beef, ground in-house, cooked over the same fire as everything else.</p>
+  </header>
+  <div class="cards">
+    <article class="card" data-search="the moorings burger two irish beef patties, smoked cheddar, house sauce, lettuce, tomato, red onion and chips. no shortcuts. burgers €16 "><div class="card-img"><img src="./assets/seq2/f000.webp" alt="The Moorings Burger" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>The Moorings Burger</h3><span class="price">€16</span></div><p>Two Irish beef patties, smoked cheddar, house sauce, lettuce, tomato, red onion and chips. No shortcuts.</p></div></article>
+    <article class="card" data-search="buttermilk chicken burger crisp chicken thigh, slaw, pickles, garlic mayo, chips. burgers €15 "><div class="card-body"><div class="card-head"><h3>Buttermilk chicken burger</h3><span class="price">€15</span></div><p>Crisp chicken thigh, slaw, pickles, garlic mayo, chips.</p></div></article>
+    <article class="card" data-search="portobello &amp; halloumi grilled portobello, halloumi, roast red pepper, basil mayo, chips. burgers €14 vegetarian"><div class="card-body"><div class="card-head"><h3>Portobello &amp; halloumi</h3><span class="price">€14</span></div><p>Grilled portobello, halloumi, roast red pepper, basil mayo, chips.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+    <article class="card" data-search="make it yours smoked bacon, blue cheese, fried egg or extra cheddar — each. burgers €1.50 "><div class="card-body"><div class="card-head"><h3>Make it yours</h3><span class="price">€1.50</span></div><p>Smoked bacon, blue cheese, fried egg or extra cheddar — each.</p></div></article>
+  </div>
+</section>
+
+<section id="mains" class="cat" data-cat>
+  <header class="cat-head">
+    <div class="cat-num">04</div>
+    <h2>Mains</h2>
+    <p>The plates people drive fifteen minutes from Boyle for.</p>
+  </header>
+  <div class="cards">
+    <article class="card" data-search="lamb shanks braised till it slides off the bone, roasted garlic, red-wine jus. order a glass of rioja with it. mains €26 gluten free"><div class="card-img"><img src="./assets/lamb.jpg" alt="Lamb shanks" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>Lamb shanks</h3><span class="price">€26</span></div><p>Braised till it slides off the bone, roasted garlic, red-wine jus. Order a glass of Rioja with it.</p><div class="tags"><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="beef &amp; guinness stew slow-cooked shin, smoked bacon, mushrooms, champ and carrot mash. winter in a bowl. mains €19 "><div class="card-img"><img src="./assets/stew.jpg" alt="Beef and Guinness stew" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>Beef &amp; Guinness stew</h3><span class="price">€19</span></div><p>Slow-cooked shin, smoked bacon, mushrooms, champ and carrot mash. Winter in a bowl.</p></div></article>
+    <article class="card" data-search="fish &amp; chips beer-battered haddock, chunky chips, mushy peas and tartare sauce. mains €18 "><div class="card-body"><div class="card-head"><h3>Fish &amp; chips</h3><span class="price">€18</span></div><p>Beer-battered haddock, chunky chips, mushy peas and tartare sauce.</p></div></article>
+    <article class="card" data-search="chicken supreme stuffed with sundried tomato and mozzarella, champ, tenderstem and a white wine cream. mains €21 gluten free"><div class="card-body"><div class="card-head"><h3>Chicken supreme</h3><span class="price">€21</span></div><p>Stuffed with sundried tomato and mozzarella, champ, tenderstem and a white wine cream.</p><div class="tags"><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="seafood linguine prawns, mussels and salmon, chilli, garlic and white wine. mains €22 "><div class="card-body"><div class="card-head"><h3>Seafood linguine</h3><span class="price">€22</span></div><p>Prawns, mussels and salmon, chilli, garlic and white wine.</p></div></article>
+    <article class="card" data-search="chickpea &amp; spinach curry coconut, coriander and basmati, with warm naan. mains €16 vegan"><div class="card-body"><div class="card-head"><h3>Chickpea &amp; spinach curry</h3><span class="price">€16</span></div><p>Coconut, coriander and basmati, with warm naan.</p><div class="tags"><span title="Vegan">VE</span></div></div></article>
+  </div>
+</section>
+
+<section id="sides" class="cat" data-cat>
+  <header class="cat-head">
+    <div class="cat-num">05</div>
+    <h2>Sides</h2>
+    <p>All of it comes in a little metal bucket. We do not apologise.</p>
+  </header>
+  <div class="cards">
+    <article class="card" data-search="chunky chips the ones in the bucket. sides €4.50 vegan"><div class="card-body"><div class="card-head"><h3>Chunky chips</h3><span class="price">€4.50</span></div><p>The ones in the bucket.</p><div class="tags"><span title="Vegan">VE</span></div></div></article>
+    <article class="card" data-search="skinny fries for the people who prefer them that way. sides €4.50 vegan"><div class="card-body"><div class="card-head"><h3>Skinny fries</h3><span class="price">€4.50</span></div><p>For the people who prefer them that way.</p><div class="tags"><span title="Vegan">VE</span></div></div></article>
+    <article class="card" data-search="champ mash, scallions, far too much butter. sides €4.50 vegetarian gluten free"><div class="card-body"><div class="card-head"><h3>Champ</h3><span class="price">€4.50</span></div><p>Mash, scallions, far too much butter.</p><div class="tags"><span title="Vegetarian">V</span><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="onion rings beer-battered, salted hot. sides €5 vegetarian"><div class="card-body"><div class="card-head"><h3>Onion rings</h3><span class="price">€5</span></div><p>Beer-battered, salted hot.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+    <article class="card" data-search="house salad dressed leaves, tomato, red onion, cucumber. sides €4.50 vegan gluten free"><div class="card-body"><div class="card-head"><h3>House salad</h3><span class="price">€4.50</span></div><p>Dressed leaves, tomato, red onion, cucumber.</p><div class="tags"><span title="Vegan">VE</span><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="garlic bread add melted cheddar for a euro more. sides €5 vegetarian"><div class="card-body"><div class="card-head"><h3>Garlic bread</h3><span class="price">€5</span></div><p>Add melted cheddar for a euro more.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+    <article class="card" data-search="sauces peppercorn, pepper, garlic butter or house dip. sides €2.50 "><div class="card-body"><div class="card-head"><h3>Sauces</h3><span class="price">€2.50</span></div><p>Peppercorn, pepper, garlic butter or house dip.</p></div></article>
+  </div>
+</section>
+
+<section id="desserts" class="cat" data-cat>
+  <header class="cat-head">
+    <div class="cat-num">06</div>
+    <h2>Desserts</h2>
+    <p>Nobody has ever regretted ordering two.</p>
+  </header>
+  <div class="cards">
+    <article class="card" data-search="chocolate biscuit cake dense, cold, the way it should be — vanilla ice cream and whipped cream. share it or don’t. desserts €8 vegetarian"><div class="card-img"><img src="./assets/dessert.jpg" alt="Chocolate biscuit cake" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>Chocolate biscuit cake</h3><span class="price">€8</span></div><p>Dense, cold, the way it should be — vanilla ice cream and whipped cream. Share it or don’t.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+    <article class="card" data-search="warm apple crumble oat crumble, cinnamon, and your choice of custard or ice cream. desserts €7.50 vegetarian"><div class="card-body"><div class="card-head"><h3>Warm apple crumble</h3><span class="price">€7.50</span></div><p>Oat crumble, cinnamon, and your choice of custard or ice cream.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+    <article class="card" data-search="baileys cheesecake biscuit base, cream, a dusting of cocoa. desserts €8 vegetarian"><div class="card-body"><div class="card-head"><h3>Baileys cheesecake</h3><span class="price">€8</span></div><p>Biscuit base, cream, a dusting of cocoa.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+    <article class="card" data-search="sticky toffee pudding butterscotch sauce and vanilla ice cream. desserts €8 vegetarian"><div class="card-body"><div class="card-head"><h3>Sticky toffee pudding</h3><span class="price">€8</span></div><p>Butterscotch sauce and vanilla ice cream.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+    <article class="card" data-search="ice cream sundae three scoops, chocolate sauce, toasted nuts. desserts €6 vegetarian"><div class="card-body"><div class="card-head"><h3>Ice cream sundae</h3><span class="price">€6</span></div><p>Three scoops, chocolate sauce, toasted nuts.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+  </div>
+</section>
+
+<section id="bar" class="cat" data-cat>
+  <header class="cat-head">
+    <div class="cat-num">07</div>
+    <h2>From the bar</h2>
+    <p>Eleven taps, a proper whiskey shelf, and live music on Friday nights.</p>
+  </header>
+  <div class="cards">
+    <article class="card" data-search="guinness poured in two parts and left to settle. worth the wait, every single time. from the bar €5.90 "><div class="card-img"><img src="./assets/pint.jpg" alt="A pint of Guinness on the bar" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>Guinness</h3><span class="price">€5.90</span></div><p>Poured in two parts and left to settle. Worth the wait, every single time.</p></div></article>
+    <article class="card" data-search="irish whiskey jameson, teeling, redbreast and green spot. neat, over ice, or with a drop of water. from the bar from €6 gluten free"><div class="card-img"><img src="./assets/whiskey.jpg" alt="A glass of Irish whiskey over ice" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>Irish whiskey</h3><span class="price">from €6</span></div><p>Jameson, Teeling, Redbreast and Green Spot. Neat, over ice, or with a drop of water.</p><div class="tags"><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="craft &amp; draught rotating irish taps alongside the usual suspects. ask what is on — it changes with the season. from the bar €5.50–€6.50 "><div class="card-body"><div class="card-head"><h3>Craft &amp; draught</h3><span class="price">€5.50–€6.50</span></div><p>Rotating Irish taps alongside the usual suspects. Ask what is on — it changes with the season.</p></div></article>
+    <article class="card" data-search="house wine red, white or rosé. by the glass or by the bottle. from the bar €7 / €26 vegan"><div class="card-body"><div class="card-head"><h3>House wine</h3><span class="price">€7 / €26</span></div><p>Red, white or rosé. By the glass or by the bottle.</p><div class="tags"><span title="Vegan">VE</span></div></div></article>
+    <article class="card" data-search="piña colada “best piña colada around,” said a regular. we have decided to believe them. from the bar €10 "><div class="card-body"><div class="card-head"><h3>Piña Colada</h3><span class="price">€10</span></div><p>“Best Piña Colada around,” said a regular. We have decided to believe them.</p></div></article>
+    <article class="card" data-search="irish coffee jameson, brown sugar, and cream floated on the back of a spoon. from the bar €8 "><div class="card-body"><div class="card-head"><h3>Irish coffee</h3><span class="price">€8</span></div><p>Jameson, brown sugar, and cream floated on the back of a spoon.</p></div></article>
+  </div>
+</section>
+
+<section id="soft" class="cat" data-cat>
+  <header class="cat-head">
+    <div class="cat-num">08</div>
+    <h2>Soft drinks &amp; coffee</h2>
+    <p>For the drivers, the designated, and anyone under eighteen.</p>
+  </header>
+  <div class="cards">
+    <article class="card" data-search="coca-cola regular or diet, over plenty of ice with a wedge of lime. soft drinks &amp; coffee €3.20 vegan gluten free"><div class="card-img"><img src="./assets/cola.jpg" alt="A cold glass of cola with ice and lime" loading="lazy" decoding="async"></div><div class="card-body"><div class="card-head"><h3>Coca-Cola</h3><span class="price">€3.20</span></div><p>Regular or Diet, over plenty of ice with a wedge of lime.</p><div class="tags"><span title="Vegan">VE</span><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="minerals 7up, fanta, club orange, ginger ale, tonic. soft drinks &amp; coffee €3 vegan"><div class="card-body"><div class="card-head"><h3>Minerals</h3><span class="price">€3</span></div><p>7UP, Fanta, Club Orange, ginger ale, tonic.</p><div class="tags"><span title="Vegan">VE</span></div></div></article>
+    <article class="card" data-search="still or sparkling water bottled and properly chilled. tap water is free, always. soft drinks &amp; coffee €2.80 vegan gluten free"><div class="card-body"><div class="card-head"><h3>Still or sparkling water</h3><span class="price">€2.80</span></div><p>Bottled and properly chilled. Tap water is free, always.</p><div class="tags"><span title="Vegan">VE</span><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="fresh orange juice squeezed that morning. good with the full irish. soft drinks &amp; coffee €3.50 vegan gluten free"><div class="card-body"><div class="card-head"><h3>Fresh orange juice</h3><span class="price">€3.50</span></div><p>Squeezed that morning. Good with the Full Irish.</p><div class="tags"><span title="Vegan">VE</span><span title="Gluten free">GF</span></div></div></article>
+    <article class="card" data-search="tea or americano barry’s or lyons, and we will not take sides. soft drinks &amp; coffee €2.80 vegan"><div class="card-body"><div class="card-head"><h3>Tea or Americano</h3><span class="price">€2.80</span></div><p>Barry’s or Lyons, and we will not take sides.</p><div class="tags"><span title="Vegan">VE</span></div></div></article>
+    <article class="card" data-search="cappuccino or latte oat or almond milk at no extra charge. soft drinks &amp; coffee €3.60 vegetarian"><div class="card-body"><div class="card-head"><h3>Cappuccino or latte</h3><span class="price">€3.60</span></div><p>Oat or almond milk at no extra charge.</p><div class="tags"><span title="Vegetarian">V</span></div></div></article>
+  </div>
+</section>
+
+  <section class="empty" data-empty hidden>
+    <h2>Nothing on the menu matches that.</h2>
+    <p data-empty-text>Try <b>ribs</b>, <b>vegan</b>, <b>whiskey</b> or <b>coffee</b>.</p>
+    <div class="actions"><button class="btn-ghost" type="button" data-search-reset>Clear the search</button></div>
+  </section>
+
+  <section class="note" data-note>
+    <h2>Also on, most weeks</h2>
+    <ul>
+      <li><b>Full Irish</b><span>From 10am at weekends, until the bacon runs out.</span></li>
+      <li><b>Sunday roast</b><span>Carvery from 12:45. Worth booking for a group.</span></li>
+      <li><b>Kids’ menu</b><span>€8.50, always available, with a scoop of ice cream after.</span></li>
+      <li><b>Live music</b><span>Friday nights in the bar. No cover charge.</span></li>
+    </ul>
+    <div class="actions">
+      <a class="btn-solid" href="tel:+353719667622">Call to book →</a>
+      <a class="btn-ghost" href="https://www.google.com/maps/dir/?api=1&amp;destination=The+Moorings+Lough+Key+Marina+Knockvicar" target="_blank" rel="noopener">Get directions →</a>
+    </div>
+  </section>
+
+  <div class="legend" data-legend>
+    <span><b>V</b> Vegetarian</span><span><b>VE</b> Vegan</span><span><b>GF</b> Gluten free</span>
+    <span>Allergens: please tell your server before ordering.</span>
+  </div>
+</main>
+
+<footer>
+  <div style="display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px">
+    <span style="font-family:'Playfair Display',serif;font-size:18px;letter-spacing:.02em;text-transform:none;color:#bfb5a3">The Moorings Bar &amp; Restaurant</span>
+    <div style="display:flex;gap:28px"><a href="./index.html">Home</a><a href="https://www.facebook.com" target="_blank" rel="noopener">Facebook</a><a href="https://www.instagram.com" target="_blank" rel="noopener">Instagram</a><a href="tel:+353719667622">Call</a></div>
+  </div>
+  <div class="fine">Design preview only — not the official website of The Moorings. Phone number, prices and opening hours are placeholders and may not be accurate. Please check Google Maps for current details. Drink photography: Rahul Haridas, Ambitious Studio — Rick Barrett and David Foodphototasty on Unsplash.</div>
+</footer>
+
+<a href="tel:+353719667622" class="m-sticky">Call +353 71 966 7622</a>
+
+<script>
+(function(){
+  var nav = document.querySelector('[data-nav]'),
+      toggle = document.querySelector('[data-nav-toggle]'),
+      panel = document.querySelector('[data-nav-panel]'),
+      catbar = document.querySelector('.catbar'),
+      chips = [].slice.call(document.querySelectorAll('[data-chips] .chip')),
+      cats = [].slice.call(document.querySelectorAll('[data-cat]')),
+      cards = [].slice.call(document.querySelectorAll('.card')),
+      box = document.querySelector('[data-search-box]'),
+      input = document.querySelector('[data-search-input]'),
+      clearBtn = document.querySelector('[data-search-clear]'),
+      empty = document.querySelector('[data-empty]'),
+      emptyText = document.querySelector('[data-empty-text]'),
+      note = document.querySelector('[data-note]'),
+      reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
+      menuOpen = false, tween = null, query = '';
+
+  /* keep the sticky offsets honest once fonts have settled */
+  function measure(){
+    document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+    document.documentElement.style.setProperty('--cat-h', catbar.offsetHeight + 'px');
+  }
+  measure();
+  window.addEventListener('resize', measure);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
+
+  /* ---- mobile dropdown ---- */
+  function setMenu(open){
+    menuOpen = open;
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    panel.setAttribute('data-open', open ? 'true' : 'false');
+  }
+  setMenu(false);
+  toggle.addEventListener('click', function(e){ e.stopPropagation(); setMenu(!menuOpen); });
+  panel.addEventListener('click', function(e){ e.stopPropagation(); });
+  document.addEventListener('click', function(){ if (menuOpen) setMenu(false); });
+  window.addEventListener('resize', function(){ if (window.innerWidth >= 760 && menuOpen) setMenu(false); });
+
+  /* ---- eased scrolling ---- */
+  function offset(){ return nav.offsetHeight + catbar.offsetHeight; }
+  function stop(){ if (tween) { cancelAnimationFrame(tween); tween = null; } }
+  ['wheel','touchstart'].forEach(function(ev){ window.addEventListener(ev, stop, { passive: true }); });
+
+  function glideTo(y){
+    y = Math.max(0, Math.round(y));
+    if (reduce) { window.scrollTo(0, y); return; }
+    stop();
+    var from = window.pageYOffset, delta = y - from,
+        dur = Math.min(1100, Math.max(420, Math.abs(delta) / 2.6)), t0 = null;
+    function step(ts){
+      if (t0 === null) t0 = ts;
+      var p = Math.min(1, (ts - t0) / dur),
+          e = p < .5 ? 4 * p * p * p : 1 - Math.pow(-2 * p + 2, 3) / 2;
+      window.scrollTo(0, from + delta * e);
+      tween = p < 1 ? requestAnimationFrame(step) : null;
+    }
+    tween = requestAnimationFrame(step);
+  }
+  function goTo(target){ glideTo(target.getBoundingClientRect().top + window.pageYOffset - offset()); }
+
+  document.querySelectorAll('a[href^="#"]').forEach(function(a){
+    a.addEventListener('click', function(e){
+      var id = a.getAttribute('href');
+      if (!id || id.length < 2) return;
+      var target = document.querySelector(id);
+      if (!target) return;
+      e.preventDefault();
+      setMenu(false);
+      if (query) { input.value = ''; runSearch(''); }   /* a category pick clears the filter */
+      goTo(target);
+      if (history.replaceState) history.replaceState(null, '', id);
+    });
+  });
+
+  /* ---- search ---- */
+  function reveal(card){ card.classList.add('in'); }
+
+  /* cache the original copy once, so highlighting can be rebuilt from scratch */
+  cards.forEach(function(c){
+    var h = c.querySelector('h3'), p = c.querySelector('p');
+    c._name = h.textContent; c._desc = p.textContent;
+  });
+
+  /* match on word starts, so "cola" finds Coca-Cola and Colada but not chocolate */
+  function termRe(t){
+    t = t.replace(/[^a-z0-9'’-]/g, '');
+    return t ? new RegExp('(^|[^a-z0-9])(' + t + ')', 'i') : null;
+  }
+  function highlight(el, orig, res){
+    el.textContent = '';
+    if (!res.length) { el.textContent = orig; return; }
+    var marks = [];
+    res.forEach(function(re){
+      var g = new RegExp(re.source, 'gi'), m;
+      while ((m = g.exec(orig))) {
+        marks.push([m.index + m[1].length, m[2].length]);
+        if (g.lastIndex === m.index) g.lastIndex++;
+      }
+    });
+    marks.sort(function(a, b){ return a[0] - b[0]; });
+    var at = 0;
+    marks.forEach(function(mk){
+      if (mk[0] < at) return;
+      if (mk[0] > at) el.appendChild(document.createTextNode(orig.slice(at, mk[0])));
+      var tag = document.createElement('mark');
+      tag.textContent = orig.substr(mk[0], mk[1]);
+      el.appendChild(tag);
+      at = mk[0] + mk[1];
+    });
+    if (at < orig.length) el.appendChild(document.createTextNode(orig.slice(at)));
+  }
+
+  function runSearch(raw){
+    query = raw.trim().toLowerCase();
+    box.setAttribute('data-filled', query ? 'true' : 'false');
+    var res = query.split(/\s+/).map(termRe).filter(Boolean),
+        terms = res.length ? res : [], hits = 0;
+    cats.forEach(function(cat){
+      var shown = 0;
+      [].slice.call(cat.querySelectorAll('.card')).forEach(function(card){
+        var hay = card.getAttribute('data-search'),
+            ok = !terms.length || terms.every(function(re){ return re.test(hay); });
+        card.hidden = !ok;
+        if (ok) {
+          shown++;
+          reveal(card);
+          highlight(card.querySelector('h3'), card._name, terms);
+          highlight(card.querySelector('p'), card._desc, terms);
+        }
+      });
+      cat.hidden = shown === 0;
+      hits += shown;
+    });
+    var searching = !!terms.length;
+    empty.hidden = !(searching && hits === 0);
+    note.hidden = searching;
+    if (searching && hits === 0) {
+      emptyText.textContent = 'Nothing matches “' + raw.trim() + '”. Try ribs, vegan, whiskey or coffee.';
+    }
+    syncChips();
+  }
+
+  input.addEventListener('input', function(){ runSearch(input.value); });
+  input.addEventListener('keydown', function(e){
+    if (e.key === 'Escape') { input.value = ''; runSearch(''); input.blur(); }
+  });
+  clearBtn.addEventListener('click', function(){ input.value = ''; runSearch(''); input.focus(); });
+  document.querySelector('[data-search-reset]').addEventListener('click', function(){
+    input.value = ''; runSearch(''); glideTo(catbar.offsetTop - nav.offsetHeight); input.focus();
+  });
+  document.addEventListener('keydown', function(e){
+    if (e.key === 'Escape' && menuOpen) { setMenu(false); return; }
+    if (e.key === '/' && document.activeElement !== input) { e.preventDefault(); input.focus(); input.select(); }
+  });
+
+  /* ---- highlight the category the reader is in ---- */
+  function syncChips(){
+    var visible = cats.filter(function(c){ return !c.hidden; });
+    if (query || !visible.length) { chips.forEach(function(c){ c.removeAttribute('aria-current'); }); return; }
+    var line = offset() + 24, active = visible[0];
+    visible.forEach(function(c){ if (c.getBoundingClientRect().top <= line) active = c; });
+    if (window.innerHeight + window.pageYOffset >= document.body.scrollHeight - 4) active = visible[visible.length - 1];
+    var on = null;
+    chips.forEach(function(c){
+      if (c.getAttribute('href') === '#' + active.id) { c.setAttribute('aria-current', 'true'); on = c; }
+      else c.removeAttribute('aria-current');
+    });
+    if (on && on.parentNode.scrollWidth > on.parentNode.clientWidth) {
+      on.parentNode.scrollTo({ left: on.offsetLeft - on.parentNode.clientWidth / 2 + on.offsetWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+    }
+  }
+  var ticking = false;
+  window.addEventListener('scroll', function(){
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function(){ syncChips(); ticking = false; });
+  }, { passive: true });
+
+  /* ---- reveal cards as they come into view ---- */
+  if (reduce || !('IntersectionObserver' in window)) {
+    cards.forEach(reveal);
+  } else {
+    var io = new IntersectionObserver(function(entries){
+      entries.forEach(function(en){
+        if (!en.isIntersecting) return;
+        var i = [].slice.call(en.target.parentNode.children).indexOf(en.target);
+        en.target.style.transitionDelay = Math.min(i % 3, 2) * 90 + 'ms';
+        reveal(en.target);
+        io.unobserve(en.target);
+      });
+    }, { rootMargin: '0px 0px -8% 0px', threshold: .08 });
+    cards.forEach(function(c){ io.observe(c); });
+  }
+
+  syncChips();
+
+  /* land below the sticky bars when arriving with a hash */
+  if (location.hash) {
+    window.addEventListener('load', function(){
+      var t = document.querySelector(location.hash);
+      if (t) setTimeout(function(){ window.scrollTo(0, Math.max(0, t.getBoundingClientRect().top + window.pageYOffset - offset())); }, 60);
+    });
+  }
+})();
+</script>
+</body>
+</html>
