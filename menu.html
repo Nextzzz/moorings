@@ -855,7 +855,7 @@ footer a{color:#8a8275}
       emptyText = document.querySelector('[data-empty-text]'),
       note = document.querySelector('[data-note]'),
       reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
-      menuOpen = false, tween = null, query = '';
+      menuOpen = false, tween = null, query = '', activeId = null;
 
   /* keep the sticky offsets honest once fonts have settled */
   function measure(){
@@ -863,7 +863,7 @@ footer a{color:#8a8275}
     document.documentElement.style.setProperty('--cat-h', catbar.offsetHeight + 'px');
   }
   measure();
-  window.addEventListener('resize', measure);
+  window.addEventListener('resize', function(){ measure(); activeId = null; });
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(measure);
 
   /* ---- mobile dropdown ---- */
@@ -999,17 +999,23 @@ footer a{color:#8a8275}
   /* ---- highlight the category the reader is in ---- */
   function syncChips(){
     var visible = cats.filter(function(c){ return !c.hidden; });
-    if (query || !visible.length) { chips.forEach(function(c){ c.removeAttribute('aria-current'); }); return; }
+    if (query || !visible.length) { chips.forEach(function(c){ c.removeAttribute('aria-current'); }); activeId = null; return; }
     var line = offset() + 24, active = visible[0];
     visible.forEach(function(c){ if (c.getBoundingClientRect().top <= line) active = c; });
     if (window.innerHeight + window.pageYOffset >= document.body.scrollHeight - 4) active = visible[visible.length - 1];
+    /* the strip stays put while you read a category; it only glides when you cross into the next one */
+    if (active.id === activeId) return;
+    activeId = active.id;
     var on = null;
     chips.forEach(function(c){
       if (c.getAttribute('href') === '#' + active.id) { c.setAttribute('aria-current', 'true'); on = c; }
       else c.removeAttribute('aria-current');
     });
-    if (on && on.parentNode.scrollWidth > on.parentNode.clientWidth) {
-      on.parentNode.scrollTo({ left: on.offsetLeft - on.parentNode.clientWidth / 2 + on.offsetWidth / 2, behavior: reduce ? 'auto' : 'smooth' });
+    var strip = on && on.parentNode;
+    if (strip && strip.scrollWidth > strip.clientWidth) {
+      var sr = strip.getBoundingClientRect(), cr = on.getBoundingClientRect();
+      strip.scrollTo({ left: Math.max(0, strip.scrollLeft + (cr.left - sr.left) - (sr.width - cr.width) / 2),
+                       behavior: reduce ? 'auto' : 'smooth' });
     }
   }
   var ticking = false;
