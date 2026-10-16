@@ -60,7 +60,7 @@ nav[data-nav]{position:fixed;top:0;left:0;right:0;z-index:50;display:flex;align-
 .catbar-row{display:flex;align-items:center;gap:18px;padding:10px clamp(20px,5vw,72px)}
 .chips{flex:1 1 auto;min-width:0;display:flex;gap:10px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding:1px 0}
 .chips::-webkit-scrollbar{display:none}
-.chip{flex:none;padding:9px 16px;border:1px solid rgba(239,230,214,.18);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#bfb5a3;white-space:nowrap;transition:background .3s,color .3s,border-color .3s}
+.chip{flex:none;display:inline-flex;align-items:center;padding:9px 16px;border:1px solid rgba(239,230,214,.18);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:#bfb5a3;white-space:nowrap;transition:background .3s,color .3s,border-color .3s}
 .chip:hover{color:#efe6d6;border-color:rgba(239,230,214,.45)}
 .chip[aria-current="true"]{background:#c9a05c;border-color:#c9a05c;color:#0b0e13}
 .search{flex:0 0 auto;position:relative;width:260px}
@@ -120,9 +120,10 @@ footer a{color:#8a8275}
 .m-sticky{display:none;position:fixed;left:16px;right:16px;bottom:16px;z-index:60;justify-content:center;padding:16px;background:#c9a05c;color:#0b0e13;font-weight:600;font-size:13px;letter-spacing:.14em;text-transform:uppercase;box-shadow:0 20px 40px -10px rgba(0,0,0,.7)}
 
 @media (max-width:899px){
-  .catbar-row{flex-direction:column-reverse;align-items:stretch;gap:9px;padding:9px clamp(20px,5vw,72px)}
+  .catbar-row{flex-direction:column-reverse;align-items:stretch;gap:7px;padding:7px clamp(20px,5vw,72px)}
   .search{width:auto}
-  .search input{height:38px}
+  .search input{height:42px}
+  .chip{min-height:44px;padding:0 16px}
 }
 @media (max-width:759px){
   .navlinks,.navcta{display:none}
@@ -132,6 +133,10 @@ footer a{color:#8a8275}
   .hero-strip{aspect-ratio:3/2}
   .card-body{padding:20px}
   .note li{grid-template-columns:1fr}
+  .brand{padding:7px 0;margin:-7px 0}
+  .back{margin-top:16px;padding:14px 0}
+  footer a{display:inline-block;padding:14px 0}
+  .legend{gap:4px 28px}
 }
 @media (prefers-reduced-motion:reduce){
   .card{opacity:1;transform:none;transition:none}
